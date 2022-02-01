@@ -36,6 +36,7 @@ const SolutionContainer = styled.div`
     & > div {
       display: flex;
       flex-direction: column;
+      margin-right: 30px;
 
       @media (max-width: 768px) {
         margin: 0 auto;

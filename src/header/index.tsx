@@ -73,6 +73,11 @@ const MoreButton = styled.button`
 const MenuIcon = styled.img`
   width: 48px;
   height: 48px;
+
+  @media (max-width: 480px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 export default function Header() {
