@@ -8,6 +8,8 @@ interface TextProps {
   letterSpacing?: number;
   color?: string;
   textDecoration?: "underline" | "overline" | "line-through";
+  margin?: string;
+  textAlign?: "left" | "right" | "center";
 }
 
 export const BaseText = styled.div<TextProps>`
@@ -18,8 +20,11 @@ export const BaseText = styled.div<TextProps>`
   color: ${({ color }) => (color ? color : "#000")};
 
   white-space: pre-line;
-  text-align: center;
+  text-align: ${({ textAlign }) => (textAlign ? textAlign : "center")};
 
+  ${({ letterSpacing }) =>
+    letterSpacing && `letter-spacing: ${letterSpacing}px`};
   ${({ textDecoration }) =>
     textDecoration && `text-decoration: ${textDecoration}`};
+  ${({ margin }) => margin && `margin: ${margin}`};
 `;

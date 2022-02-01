@@ -11,8 +11,8 @@ const PartnerContainer = styled.div`
 
   box-sizing: border-box;
 
-  padding: 0 30px;
-
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
   & > div {
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@ const PartnerContainer = styled.div`
     }
 
     & > div:not(:last-child) {
-      margin-right: 120px;
+      margin-right: 118px;
     }
   }
 `;

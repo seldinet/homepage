@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { BaseText } from "../components";
+import { BaseButton, BaseText } from "../components";
 
 const IntroContainer = styled.div`
   display: flex;
@@ -23,6 +23,7 @@ const IntroContainer = styled.div`
 
   & > div {
     margin-top: 30px;
+    text-align: center;
   }
 `;
 
@@ -47,6 +48,16 @@ export default function IntroSection() {
           color="#fff"
         >{`이제, '내 제품'에 최적화된
         세일즈&마케팅에 집중하세요`}</BaseText>
+        <BaseButton
+          borderRadius={8}
+          fontSize={18}
+          fontWeight="bold"
+          lineHeight={1.61}
+          letterSpacing={-0.35}
+          margin="40px 0 0 0"
+        >
+          상담 신청
+        </BaseButton>
       </div>
     </IntroContainer>
   );

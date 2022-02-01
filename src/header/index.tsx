@@ -9,7 +9,7 @@ const HeaderContainer = styled.div`
   background-color: #00135f;
   box-sizing: border-box;
 
-  padding: 0 30px;
+  padding: 0 20px;
 
   & > div {
     display: flex;
@@ -65,10 +65,10 @@ export default function Header() {
           </BaseText>
         </div>
         <div>
-          <BaseText fontSize={16} lineHeight={1.61} color="#fff">
+          <BaseText opacity={0.8} fontSize={16} lineHeight={1.61} color="#fff">
             로그인
           </BaseText>
-          <BaseText fontSize={16} lineHeight={1.61} color="#fff">
+          <BaseText opacity={0.8} fontSize={16} lineHeight={1.61} color="#fff">
             문의하기
           </BaseText>
         </div>
