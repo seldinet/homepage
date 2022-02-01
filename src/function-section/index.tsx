@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { BaseText } from "../components";
+import { BaseH2 } from "../components";
 import { addPrefix } from "../utils/addPrefix";
 
 import { FUNCTIONS } from "./contants";
@@ -31,6 +31,10 @@ const FunctionContainer = styled.div`
       display: flex;
       align-items: center;
 
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
       & > div:not(:last-child) {
         margin-right: 32px;
 
@@ -38,10 +42,6 @@ const FunctionContainer = styled.div`
           margin-right: 0;
           margin-bottom: 10px;
         }
-      }
-
-      @media (max-width: 768px) {
-        flex-direction: column;
       }
     }
   }
@@ -56,17 +56,15 @@ const ArrowImage = styled.img`
 export default function FunctionSection() {
   return (
     <FunctionContainer>
-      <BaseText
-        fontSize={32}
-        fontWeight="bold"
-        lineHeight={1.5}
-        color="#333d4b"
-      >
+      <BaseH2 fontSize={32} fontWeight="bold" lineHeight={1.5} color="#333d4b">
         {"셀디는 '내 제품'에 최적화된 세일즈&마케팅 방법을 찾아드립니다."}
-      </BaseText>
-      <ArrowImage src={addPrefix("/images/arrows-icon.png")} />
+      </BaseH2>
+      <ArrowImage
+        src={addPrefix("/images/arrows-icon.png")}
+        alt="arrows-icon"
+      />
       <div>
-        <BaseText
+        <BaseH2
           fontSize={32}
           fontWeight="bold"
           lineHeight={1.5}
@@ -75,7 +73,7 @@ export default function FunctionSection() {
         >
           {`세일즈&마케팅을 진행할수록
 최적화되는 '나만의 수출 노하우'`}
-        </BaseText>
+        </BaseH2>
         <div>
           {FUNCTIONS.map(({ name, image }) => {
             return <FunctionItem key={name} name={name} image={image} />;

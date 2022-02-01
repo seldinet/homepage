@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { BaseButton, BaseText } from "../components";
+import { BaseButton, BaseParagrpah, BaseH1 } from "../components";
 import { addPrefix } from "../utils/addPrefix";
 
 const IntroContainer = styled.div`
@@ -31,24 +31,24 @@ const IntroContainer = styled.div`
 export default function IntroSection() {
   return (
     <IntroContainer>
-      <BaseText fontSize={40} fontWeight="bold" color="#fff">{`중국 수출 전문
-      CRM 마케팅 솔루션, 셀디`}</BaseText>
+      <BaseH1 fontSize={40} fontWeight="bold" color="#fff">{`중국 수출 전문
+      CRM 마케팅 솔루션, 셀디`}</BaseH1>
 
       <div>
-        <BaseText
+        <BaseH1
           textDecoration="line-through"
           fontSize={20}
           lineHeight={1.6}
           color="#1461ff"
         >
           '남들이 다 하기 때문에'
-        </BaseText>
-        <BaseText
+        </BaseH1>
+        <BaseParagrpah
           fontSize={20}
           lineHeight={1.6}
           color="#fff"
         >{`이제, '내 제품'에 최적화된
-        세일즈&마케팅에 집중하세요`}</BaseText>
+        세일즈&마케팅에 집중하세요`}</BaseParagrpah>
         <BaseButton
           borderRadius={8}
           fontSize={18}

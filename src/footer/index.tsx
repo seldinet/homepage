@@ -14,12 +14,11 @@ const FooterContainer = styled.div`
   & > div {
     display: flex;
     margin: 0 auto;
+    width: 100%;
 
     @media (min-width: 769px) {
       max-width: 1200px;
     }
-
-    width: 100%;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -53,7 +52,10 @@ export default function Footer() {
     <FooterContainer>
       <div>
         <div>
-          <FooterImage src={addPrefix("/images/footer-logo.png")} />
+          <FooterImage
+            src={addPrefix("/images/footer-logo.png")}
+            alt="sedi-logo"
+          />
           <BaseText
             fontSize={14}
             lineHeight={1.71}

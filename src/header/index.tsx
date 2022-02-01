@@ -6,24 +6,20 @@ import { addPrefix } from "../utils/addPrefix";
 
 const HeaderContainer = styled.div`
   width: 100%;
-
   background-color: #00135f;
   box-sizing: border-box;
-
   padding: 0 20px;
 
   & > div {
     display: flex;
     align-items: center;
     margin: 0 auto;
-
+    width: 100%;
     height: 80px;
 
     @media (min-width: 769px) {
       max-width: 1200px;
     }
-
-    width: 100%;
 
     & > div:not(:last-child) {
       display: flex;
@@ -63,8 +59,8 @@ const HeaderLogo = styled.img`
 const MoreButton = styled.button`
   border: none;
   background-color: inherit;
-
   margin-left: auto;
+
   @media (min-width: 769px) {
     display: none;
   }
@@ -84,9 +80,12 @@ export default function Header() {
   return (
     <HeaderContainer>
       <div>
-        <HeaderLogo src={addPrefix("/images/header-logo.png")} />
+        <HeaderLogo
+          src={addPrefix("/images/header-logo.png")}
+          alt="seldi-logo"
+        />
         <MoreButton>
-          <MenuIcon src={addPrefix("/images/menu-icon.png")} />
+          <MenuIcon src={addPrefix("/images/menu-icon.png")} alt="menu-icon" />
         </MoreButton>
         <div>
           <BaseText fontSize={16} lineHeight={1.61} color="#fff">

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BaseText } from "../components";
+import { BaseH2, BaseParagrpah } from "../components";
 import { addPrefix } from "../utils/addPrefix";
 
 const SolutionContainer = styled.div`
@@ -13,8 +13,10 @@ const SolutionContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    box-sizing: border-box;
     padding: 120px 0;
+    margin: 0 auto;
+    width: 100%;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -23,15 +25,9 @@ const SolutionContainer = styled.div`
       padding: 120px 0 0;
     }
 
-    margin: 0 auto;
-
     @media (min-width: 769px) {
       max-width: 1200px;
     }
-
-    width: 100%;
-
-    box-sizing: border-box;
 
     & > div {
       display: flex;
@@ -45,7 +41,7 @@ const SolutionContainer = styled.div`
   }
 `;
 
-const MainText = styled(BaseText)`
+const MainText = styled(BaseH2)`
   & > span {
     color: #1461ff;
   }
@@ -55,7 +51,7 @@ const MainText = styled(BaseText)`
   }
 `;
 
-const ResponsiveText = styled(BaseText)`
+const ResponsiveText = styled(BaseParagrpah)`
   @media (max-width: 768px) {
     text-align: center;
   }
@@ -128,7 +124,10 @@ export default function SolutionSection() {
             수 있습니다
           </ResponsiveText>
         </div>
-        <SolutionImage src={addPrefix("/images/solution-image.png")} />
+        <SolutionImage
+          src={addPrefix("/images/solution-image.png")}
+          alt="seldi-solution"
+        />
       </div>
     </SolutionContainer>
   );

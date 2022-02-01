@@ -7,21 +7,17 @@ const PartnerContainer = styled.div`
   width: 100%;
   height: 80px;
   display: flex;
-
   box-sizing: border-box;
-
   padding: 0 20px;
   border-bottom: 1px solid #ddd;
+
   & > div {
     display: flex;
     align-items: center;
     margin: 0 auto;
-
     height: 80px;
     width: 100%;
-
     overflow-y: scroll;
-
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     ::-webkit-scrollbar {

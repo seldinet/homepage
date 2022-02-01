@@ -5,7 +5,6 @@ import { BaseButton, BaseText } from "../components";
 const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
-
   align-items: center;
 
   padding: 28px 13px 12px;
@@ -33,7 +32,7 @@ export default function FunctionItem({
       <BaseText fontSize={16} lineHeight={3} color="#fff" margin="0 0 16px 0">
         {name}
       </BaseText>
-      <ItemImage src={image} />
+      <ItemImage src={image} alt={`${name}-function`} />
       <BaseButton
         padding="10px 55px"
         borderRadius={8}

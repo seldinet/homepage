@@ -7,7 +7,6 @@ const MapContainer = styled.div`
   width: 100%;
   box-sizing: border-box;
   background-color: #edf1f6;
-
   padding: 0 20px;
 
   & > div {
@@ -17,6 +16,12 @@ const MapContainer = styled.div`
     margin: 0 auto;
 
     padding: 80px 0 100px;
+
+    & > div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
 
     @media (min-width: 769px) {
       max-width: 1200px;
@@ -38,12 +43,6 @@ const MapContainer = styled.div`
           margin-top: -35px;
         }
       }
-    }
-
-    & > div {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
     }
   }
 `;
@@ -82,7 +81,10 @@ export default function MapSection() {
           >
             서울시 강남대로364 미왕빌딩 1709
           </BaseText>
-          <Image src={addPrefix("/images/map.png")} />
+          <Image
+            src={addPrefix("/images/map.png")}
+            alt="seldi-company-position"
+          />
         </div>
         <div>
           <BaseText
@@ -95,7 +97,10 @@ export default function MapSection() {
           >
             셀디 스튜디오
           </BaseText>
-          <Image src={addPrefix("/images/studio-image.png")} />
+          <Image
+            src={addPrefix("/images/studio-image.png")}
+            alt="sedi-studio-image"
+          />
         </div>
       </div>
     </MapContainer>

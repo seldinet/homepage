@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BaseText } from "../components";
+import { BaseParagrpah, BaseH2 } from "../components";
 import { addPrefix } from "../utils/addPrefix";
 
 const DocumentContainer = styled.div`
@@ -12,6 +12,10 @@ const DocumentContainer = styled.div`
   & > div {
     display: flex;
     align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 120px 0;
+    margin: 0 auto;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -19,16 +23,9 @@ const DocumentContainer = styled.div`
       justify-content: normal;
     }
 
-    margin: 0 auto;
-
     @media (min-width: 769px) {
       max-width: 1200px;
     }
-
-    width: 100%;
-
-    padding: 120px 0;
-    box-sizing: border-box;
 
     & > div:first-child {
       display: flex;
@@ -40,7 +37,6 @@ const DocumentContainer = styled.div`
 
       & > img {
         margin-right: 40px;
-
         @media (max-width: 768px) {
           margin: 0;
         }
@@ -61,7 +57,7 @@ const DocumentContainer = styled.div`
   }
 `;
 
-const MainText = styled(BaseText)`
+const MainText = styled(BaseH2)`
   & > span {
     color: #1461ff;
   }
@@ -71,7 +67,7 @@ const MainText = styled(BaseText)`
   }
 `;
 
-const ResponsiveText = styled(BaseText)`
+const ResponsiveText = styled(BaseParagrpah)`
   @media (max-width: 768px) {
     text-align: center;
   }
@@ -92,8 +88,14 @@ export default function DocumentSection() {
     <DocumentContainer>
       <div>
         <div>
-          <DocumentImage src={addPrefix("/images/document-image1.png")} />
-          <DocumentImage src={addPrefix("/images/document-image2.png")} />
+          <DocumentImage
+            src={addPrefix("/images/document-image1.png")}
+            alt="sedi-document"
+          />
+          <DocumentImage
+            src={addPrefix("/images/document-image2.png")}
+            alt="sedi-document"
+          />
         </div>
         <div>
           <MainText

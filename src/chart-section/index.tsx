@@ -1,37 +1,33 @@
 import React from "react";
 import styled from "styled-components";
-import { BaseText } from "../components";
+import { BaseText, BaseH2 } from "../components";
 import { addPrefix } from "../utils/addPrefix";
 
 const ChartContainer = styled.div`
   display: flex;
-
-  width: 100%;
   box-sizing: border-box;
-
+  width: 100%;
   padding: 0 20px;
 
   & > div {
     display: flex;
     flex-direction: column;
-
     padding: 120px 0;
-
+    margin: 0 auto;
     width: 100%;
+
     @media (min-width: 769px) {
       max-width: 1200px;
       flex-direction: row;
       align-items: center;
     }
 
-    margin: 0 auto;
-
     & > div {
+      margin-bottom: 55px;
       @media (min-width: 769px) {
         margin-right: 55px;
         margin-bottom: 0;
       }
-      margin-bottom: 55px;
     }
   }
 `;
@@ -51,7 +47,7 @@ export default function ChartSection() {
     <ChartContainer>
       <div>
         <div>
-          <BaseText
+          <BaseH2
             textAlign="left"
             fontSize={32}
             fontWeight="bold"
@@ -63,7 +59,7 @@ export default function ChartSection() {
             {
               "왕홍 마케팅, 입점 판매… 중국 수출 시도는 많았지만, 아직 나만의 고객을 찾지 못하셨나요?"
             }
-          </BaseText>
+          </BaseH2>
           <BaseText
             textAlign="left"
             fontSize={16}
@@ -76,7 +72,10 @@ export default function ChartSection() {
             }
           </BaseText>
         </div>
-        <ChartImage src={addPrefix("/images/chart.png")} />
+        <ChartImage
+          src={addPrefix("/images/chart.png")}
+          alt="seldi-chart-exapmle"
+        />
       </div>
     </ChartContainer>
   );
