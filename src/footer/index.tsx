@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BaseText } from "../components";
+import { addPrefix } from "../utils/addPrefix";
 
 const FooterContainer = styled.div`
   background-color: #272730;
@@ -52,7 +53,7 @@ export default function Footer() {
     <FooterContainer>
       <div>
         <div>
-          <FooterImage src="images/footer-logo.png" />
+          <FooterImage src={addPrefix("/images/footer-logo.png")} />
           <BaseText
             fontSize={14}
             lineHeight={1.71}

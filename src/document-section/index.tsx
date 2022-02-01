@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BaseText } from "../components";
+import { addPrefix } from "../utils/addPrefix";
 
 const DocumentContainer = styled.div`
   width: 100%;
@@ -80,8 +81,8 @@ export default function DocumentSection() {
     <DocumentContainer>
       <div>
         <div>
-          <DocumentImage src="images/document-image1.png" />
-          <DocumentImage src="images/document-image2.png" />
+          <DocumentImage src={addPrefix("/images/document-image1.png")} />
+          <DocumentImage src={addPrefix("/images/document-image2.png")} />
         </div>
         <div>
           <MainText

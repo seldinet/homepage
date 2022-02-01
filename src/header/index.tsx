@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { BaseText } from "../components";
+import { addPrefix } from "../utils/addPrefix";
 
 const HeaderContainer = styled.div`
   width: 100%;
@@ -78,9 +79,9 @@ export default function Header() {
   return (
     <HeaderContainer>
       <div>
-        <HeaderLogo src="images/header-logo.png" />
+        <HeaderLogo src={addPrefix("/images/header-logo.png")} />
         <MoreButton>
-          <MenuIcon src="images/menu-icon.png" />
+          <MenuIcon src={addPrefix("/images/menu-icon.png")} />
         </MoreButton>
         <div>
           <BaseText fontSize={16} lineHeight={1.61} color="#fff">

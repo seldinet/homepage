@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BaseText } from "../components";
+import { addPrefix } from "../utils/addPrefix";
 
 const MapContainer = styled.div`
   width: 100%;
@@ -32,6 +33,7 @@ const MapContainer = styled.div`
     }
 
     & > div {
+      width: 100%;
       display: flex;
       flex-direction: column;
     }
@@ -69,7 +71,7 @@ export default function MapSection() {
           >
             서울시 강남대로364 미왕빌딩 1709
           </BaseText>
-          <Image src="images/map.png" />
+          <Image src={addPrefix("/images/map.png")} />
         </div>
         <div>
           <BaseText
@@ -82,7 +84,7 @@ export default function MapSection() {
           >
             셀디 스튜디오
           </BaseText>
-          <Image src="images/studio-image.png" />
+          <Image src={addPrefix("/images/studio-image.png")} />
         </div>
       </div>
     </MapContainer>

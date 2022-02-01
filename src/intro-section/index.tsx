@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { BaseButton, BaseText } from "../components";
+import { addPrefix } from "../utils/addPrefix";
 
 const IntroContainer = styled.div`
   display: flex;
@@ -14,7 +15,7 @@ const IntroContainer = styled.div`
   height: 520px;
 
   background-color: #00135f;
-  background-image: url("images/visual-img.png");
+  background-image: url(${addPrefix("/images/visual-img.png")});
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

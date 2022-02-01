@@ -10,6 +10,8 @@ import DocumentSection from "./document-section";
 import MapSection from "./map-section";
 import Footer from "./footer";
 
+import { Modal } from "./components";
+
 function App() {
   return (
     <div>
@@ -22,6 +24,7 @@ function App() {
       <DocumentSection />
       <MapSection />
       <Footer />
+      {/* <Modal /> */}
     </div>
   );
 }
