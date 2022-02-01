@@ -52,7 +52,7 @@ export default function Footer() {
     <FooterContainer>
       <div>
         <div>
-          <FooterImage src="/images/footer-logo.png" />
+          <FooterImage src="images/footer-logo.png" />
           <BaseText
             fontSize={14}
             lineHeight={1.71}

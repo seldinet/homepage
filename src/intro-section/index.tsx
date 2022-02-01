@@ -14,7 +14,7 @@ const IntroContainer = styled.div`
   height: 520px;
 
   background-color: #00135f;
-  background-image: url("/images/visual-img.png");
+  background-image: url("images/visual-img.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

@@ -22,7 +22,7 @@ const FunctionContainer = styled.div`
     padding: 80px 20px 100px 20px;
     box-sizing: border-box;
 
-    background-image: url("/images/visual-image2.svg");
+    background-image: url("images/visual-image2.svg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -63,7 +63,7 @@ export default function FunctionSection() {
       >
         {"셀디는 '내 제품'에 최적화된 세일즈&마케팅 방법을 찾아드립니다."}
       </BaseText>
-      <ArrowImage src="/images/arrows-icon.png" />
+      <ArrowImage src="images/arrows-icon.png" />
       <div>
         <BaseText
           fontSize={32}

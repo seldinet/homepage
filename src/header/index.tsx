@@ -78,9 +78,9 @@ export default function Header() {
   return (
     <HeaderContainer>
       <div>
-        <HeaderLogo src="/images/header-logo.png" />
+        <HeaderLogo src="images/header-logo.png" />
         <MoreButton>
-          <MenuIcon src="/images/menu-icon.png" />
+          <MenuIcon src="images/menu-icon.png" />
         </MoreButton>
         <div>
           <BaseText fontSize={16} lineHeight={1.61} color="#fff">

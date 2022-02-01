@@ -108,7 +108,7 @@ export default function SolutionSection() {
 그 동안 경험에만 의존했던 확률적인 마케팅을 셀디를 통한
 ‘5분 세팅’만으로도 최적화할 수 있습니다`}</BaseText>
         </div>
-        <SolutionImage src="/images/solution-image.png" />
+        <SolutionImage src="images/solution-image.png" />
       </div>
     </SolutionContainer>
   );

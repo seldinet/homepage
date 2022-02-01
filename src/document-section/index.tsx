@@ -80,8 +80,8 @@ export default function DocumentSection() {
     <DocumentContainer>
       <div>
         <div>
-          <DocumentImage src="/images/document-image1.png" />
-          <DocumentImage src="/images/document-image2.png" />
+          <DocumentImage src="images/document-image1.png" />
+          <DocumentImage src="images/document-image2.png" />
         </div>
         <div>
           <MainText

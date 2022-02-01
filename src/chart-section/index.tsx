@@ -69,7 +69,7 @@ export default function ChartSection() {
           >{`내 제품을 원하는 고객군을 찾고, 내 고객을 위한 마케팅에 집중하는 일.
 셀디 마케팅의 시작입니다.`}</BaseText>
         </div>
-        <ChartImage src="/images/chart.png" />
+        <ChartImage src="images/chart.png" />
       </div>
     </ChartContainer>
   );
