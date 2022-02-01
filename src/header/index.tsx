@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { BaseText } from "../components";
+import { useRequestModal } from "../request-modal";
 import { addPrefix } from "../utils/addPrefix";
 
 const HeaderContainer = styled.div`
@@ -77,6 +78,7 @@ const MenuIcon = styled.img`
 `;
 
 export default function Header() {
+  const { open } = useRequestModal();
   return (
     <HeaderContainer>
       <div>
@@ -99,7 +101,13 @@ export default function Header() {
           <BaseText opacity={0.8} fontSize={16} lineHeight={1.61} color="#fff">
             로그인
           </BaseText>
-          <BaseText opacity={0.8} fontSize={16} lineHeight={1.61} color="#fff">
+          <BaseText
+            onClick={open}
+            opacity={0.8}
+            fontSize={16}
+            lineHeight={1.61}
+            color="#fff"
+          >
             문의하기
           </BaseText>
         </div>

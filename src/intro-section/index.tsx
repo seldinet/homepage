@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { BaseButton, BaseParagrpah, BaseH1 } from "../components";
+import { useRequestModal } from "../request-modal";
 import { addPrefix } from "../utils/addPrefix";
 
 const IntroContainer = styled.div`
@@ -29,6 +30,7 @@ const IntroContainer = styled.div`
 `;
 
 export default function IntroSection() {
+  const { open } = useRequestModal();
   return (
     <IntroContainer>
       <BaseH1 fontSize={40} fontWeight="bold" color="#fff">{`중국 수출 전문
@@ -56,6 +58,7 @@ export default function IntroSection() {
           lineHeight={1.61}
           letterSpacing={-0.35}
           margin="40px 0 0 0"
+          onClick={open}
         >
           상담 신청
         </BaseButton>

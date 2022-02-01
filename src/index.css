@@ -169,3 +169,6 @@ strong {
 a:any-link {
   text-decoration: none;
 }
+input {
+  margin: 0;
+}

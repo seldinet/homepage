@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import Header from "./header";
 import IntroSection from "./intro-section";
@@ -10,21 +11,23 @@ import DocumentSection from "./document-section";
 import MapSection from "./map-section";
 import Footer from "./footer";
 
-import { Modal } from "./components";
+import RequestModal, { RequestModalProvider } from "./request-modal";
 
 function App() {
   return (
     <div>
-      <Header />
-      <IntroSection />
-      <PartnerSection />
-      <ChartSection />
-      <FunctionSection />
-      <SolutionSection />
-      <DocumentSection />
-      <MapSection />
-      <Footer />
-      {/* <Modal /> */}
+      <RequestModalProvider>
+        <Header />
+        <IntroSection />
+        <PartnerSection />
+        <ChartSection />
+        <FunctionSection />
+        <SolutionSection />
+        <DocumentSection />
+        <MapSection />
+        <Footer />
+        <RequestModal />
+      </RequestModalProvider>
     </div>
   );
 }
