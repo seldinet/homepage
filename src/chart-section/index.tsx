@@ -38,7 +38,7 @@ const ChartContainer = styled.div`
 
 const ChartImage = styled.img`
   width: 100%;
-  height: 353px;
+  object-fit: contain;
 
   @media (min-width: 769px) {
     width: 564px;
@@ -59,16 +59,22 @@ export default function ChartSection() {
             letterSpacing={-1.6}
             color="#333d4b"
             margin="0 0 20px 0"
-          >{`왕홍 마케팅, 입점 판매… 중국 수출 시도는
-많았지만, 아직 나만의 고객을 찾지 못하셨나요?`}</BaseText>
+          >
+            {
+              "왕홍 마케팅, 입점 판매… 중국 수출 시도는 많았지만, 아직 나만의 고객을 찾지 못하셨나요?"
+            }
+          </BaseText>
           <BaseText
             textAlign="left"
             fontSize={16}
             lineHeight={1.7}
             color="#4e5968"
             margin="0 0 20px 0"
-          >{`내 제품을 원하는 고객군을 찾고, 내 고객을 위한 마케팅에 집중하는 일.
-셀디 마케팅의 시작입니다.`}</BaseText>
+          >
+            {
+              "내 제품을 원하는 고객군을 찾고, 내 고객을 위한 마케팅에 집중하는 일. 셀디 마케팅의 시작입니다."
+            }
+          </BaseText>
         </div>
         <ChartImage src={addPrefix("/images/chart.png")} />
       </div>

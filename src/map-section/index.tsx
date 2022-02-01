@@ -32,6 +32,14 @@ const MapContainer = styled.div`
       }
     }
 
+    & > div:last-child {
+      & > img:last-child {
+        @media (max-width: 768px) {
+          margin-top: -35px;
+        }
+      }
+    }
+
     & > div {
       width: 100%;
       display: flex;
@@ -42,9 +50,12 @@ const MapContainer = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 400px;
 
   border-radius: 12px;
+
+  @media (min-width: 769px) {
+    height: 400px;
+  }
 `;
 
 export default function MapSection() {
