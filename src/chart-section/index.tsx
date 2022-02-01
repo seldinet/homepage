@@ -13,13 +13,14 @@ const ChartContainer = styled.div`
   & > div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     padding: 120px 0;
 
     width: 100%;
     @media (min-width: 769px) {
       max-width: 1200px;
       flex-direction: row;
+      align-items: center;
     }
 
     margin: 0 auto;

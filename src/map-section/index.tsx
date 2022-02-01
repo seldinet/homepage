@@ -11,9 +11,9 @@ const MapContainer = styled.div`
 
   & > div {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     margin: 0 auto;
-    justify-content: space-between;
 
     padding: 80px 0 100px;
 
@@ -21,7 +21,15 @@ const MapContainer = styled.div`
       max-width: 1200px;
     }
 
-    width: 100%;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    & > div:first-child {
+      @media (max-width: 768px) {
+        margin-bottom: 55px;
+      }
+    }
 
     & > div {
       display: flex;
@@ -31,7 +39,7 @@ const MapContainer = styled.div`
 `;
 
 const Image = styled.img`
-  width: 576px;
+  width: 100%;
   height: 400px;
 
   border-radius: 12px;

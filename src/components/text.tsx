@@ -20,6 +20,7 @@ export const BaseText = styled.div<TextProps>`
   color: ${({ color }) => (color ? color : "#000")};
 
   white-space: pre-line;
+  word-break: keep-all;
   text-align: ${({ textAlign }) => (textAlign ? textAlign : "center")};
 
   ${({ letterSpacing }) =>

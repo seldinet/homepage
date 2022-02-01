@@ -11,7 +11,12 @@ const DocumentContainer = styled.div`
   & > div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: normal;
+    }
 
     margin: 0 auto;
 
@@ -24,14 +29,32 @@ const DocumentContainer = styled.div`
     padding: 120px 0;
     box-sizing: border-box;
 
+    & > div:first-child {
+      display: flex;
+      @media (max-width: 768px) {
+        width: 100%;
+        justify-content: space-between;
+        order: 2;
+      }
+
+      & > img:not(:last-child) {
+        margin-right: 40px;
+
+        @media (max-width: 768px) {
+          margin: 0;
+        }
+      }
+    }
+
     & > div:last-child {
       display: flex;
       flex-direction: column;
-    }
+      margin-left: auto;
 
-    & > div:not(:last-child) {
-      & > img:not(:last-child) {
-        margin-right: 40px;
+      @media (max-width: 768px) {
+        order: 1;
+        margin-left: 0;
+        margin-bottom: 55px;
       }
     }
   }
@@ -46,6 +69,10 @@ const MainText = styled(BaseText)`
 const DocumentImage = styled.img`
   width: 264px;
   height: 402px;
+
+  @media (max-width: 768px) {
+    width: 48%;
+  }
 `;
 
 export default function DocumentSection() {
@@ -66,8 +93,7 @@ export default function DocumentSection() {
             color="#333d4b"
             margin="0 0 20px 0"
           >
-            안전한 수출 운영 관리
-            <span>노하우</span>
+            안전한 수출 운영 관리 <span>노하우</span>
           </MainText>
           <BaseText
             fontSize={16}

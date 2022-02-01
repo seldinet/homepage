@@ -13,6 +13,12 @@ const SolutionContainer = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: normal;
+    }
+
     margin: 0 auto;
 
     @media (min-width: 769px) {
@@ -40,6 +46,13 @@ const MainText = styled(BaseText)`
 const SolutionImage = styled.img`
   width: 564px;
   height: 422px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 508px;
+
+    margin-top: 55px;
+  }
 `;
 
 export default function SolutionSection() {
@@ -56,8 +69,7 @@ export default function SolutionSection() {
             color="#333d4b"
             margin="0 0 20px 0"
           >
-            셀디와 함께하면
-            <span>한번에 해결 !</span>
+            셀디와 함께하면 <span>한번에 해결 !</span>
           </MainText>
           <BaseText
             fontSize={16}
@@ -96,7 +108,7 @@ export default function SolutionSection() {
 그 동안 경험에만 의존했던 확률적인 마케팅을 셀디를 통한
 ‘5분 세팅’만으로도 최적화할 수 있습니다`}</BaseText>
         </div>
-        <SolutionImage src="/images/solution.png" />
+        <SolutionImage src="/images/solution-image.png" />
       </div>
     </SolutionContainer>
   );

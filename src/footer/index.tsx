@@ -6,6 +6,7 @@ const FooterContainer = styled.div`
   background-color: #272730;
   box-sizing: border-box;
 
+  display: flex;
   width: 100%;
   padding: 30px 20px;
 
@@ -13,13 +14,15 @@ const FooterContainer = styled.div`
     display: flex;
     margin: 0 auto;
 
-    height: 212px;
-
     @media (min-width: 769px) {
       max-width: 1200px;
     }
 
     width: 100%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
 
     & > div {
       display: flex;
@@ -28,6 +31,11 @@ const FooterContainer = styled.div`
 
     & > div:not(:last-child) {
       margin-right: 129px;
+
+      @media (max-width: 768px) {
+        margin-right: 0;
+        margin-bottom: 55px;
+      }
     }
   }
 `;

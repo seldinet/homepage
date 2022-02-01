@@ -29,6 +29,10 @@ const HeaderContainer = styled.div`
       align-items: center;
       margin-left: 120px;
 
+      @media (max-width: 768px) {
+        display: none;
+      }
+
       & > div:not(:last-child) {
         margin-right: 40px;
       }
@@ -38,6 +42,10 @@ const HeaderContainer = styled.div`
       display: flex;
       align-items: center;
       margin-left: auto;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
 
       & > div:not(:last-child) {
         margin-right: 40px;
@@ -51,11 +59,29 @@ const HeaderLogo = styled.img`
   height: 30px;
 `;
 
+const MoreButton = styled.button`
+  border: none;
+  background-color: inherit;
+
+  margin-left: auto;
+  @media (min-width: 769px) {
+    display: none;
+  }
+`;
+
+const MenuIcon = styled.img`
+  width: 48px;
+  height: 48px;
+`;
+
 export default function Header() {
   return (
     <HeaderContainer>
       <div>
         <HeaderLogo src="/images/header-logo.png" />
+        <MoreButton>
+          <MenuIcon src="/images/menu-icon.png" />
+        </MoreButton>
         <div>
           <BaseText fontSize={16} lineHeight={1.61} color="#fff">
             셀디 소개
