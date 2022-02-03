@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/seldi-hompage/static/css/main.20006a86.css",
+    "main.js": "/seldi-hompage/static/js/main.ba57584b.js",
+    "static/js/787.e315d65d.chunk.js": "/seldi-hompage/static/js/787.e315d65d.chunk.js",
+    "static/media/NotoSansKR-Bold.otf": "/seldi-hompage/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
+    "static/media/NotoSansKR-Medium.otf": "/seldi-hompage/static/media/NotoSansKR-Medium.56207b5e52841342a21b.otf",
+    "static/media/NotoSansKR-Regular.otf": "/seldi-hompage/static/media/NotoSansKR-Regular.e1aa54c04a18648e6468.otf",
+    "static/media/NotoSansKR-Light.otf": "/seldi-hompage/static/media/NotoSansKR-Light.636ff9b51e826a733c3d.otf",
+    "index.html": "/seldi-hompage/index.html",
+    "main.20006a86.css.map": "/seldi-hompage/static/css/main.20006a86.css.map",
+    "main.ba57584b.js.map": "/seldi-hompage/static/js/main.ba57584b.js.map",
+    "787.e315d65d.chunk.js.map": "/seldi-hompage/static/js/787.e315d65d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20006a86.css",
+    "static/js/main.ba57584b.js"
+  ]
+}
