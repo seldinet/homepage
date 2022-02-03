@@ -28,6 +28,12 @@ const PartnerContainer = styled.div`
       max-width: 1200px;
     }
 
+    @media (max-width: 768px) {
+      & > div:nth-child(n + 4):nth-child(-n + 6) {
+        display: none;
+      }
+    }
+
     & > div:not(:last-child) {
       margin-right: 118px;
     }

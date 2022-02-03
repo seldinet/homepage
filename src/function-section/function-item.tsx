@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { BaseButton, BaseText } from "../components";
 
-const ItemContainer = styled.div`
+const ItemContainer = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,9 +23,11 @@ const ItemImage = styled.img`
 export default function FunctionItem({
   name,
   image,
+  onClick,
 }: {
   name: string;
   image: string;
+  onClick?: () => void;
 }) {
   return (
     <ItemContainer>
@@ -38,6 +40,7 @@ export default function FunctionItem({
         borderRadius={8}
         backgroundColor="#18181c"
         fontSize={12}
+        onClick={onClick}
       >
         신청하기
       </BaseButton>

@@ -25,18 +25,30 @@ const RequiredText = styled(BaseText)<{ required?: boolean }>`
 `;
 
 export default function LabelCheckbox({
+  id,
   required,
   label,
+  value,
+  onChange,
 }: {
+  id: string;
   required?: boolean;
   label: string;
+  value?: boolean;
+  onChange?: (value: boolean) => void;
 }) {
   return (
     <CheckboxContainer>
-      <BaseCheckbox />
+      <BaseCheckbox
+        name={id}
+        checked={!!value}
+        onChange={(e) => {
+          onChange && onChange(e.target.checked);
+        }}
+      />
       <RequiredText
         required={required}
-        fontSize={16}
+        fontSize={13}
         lineHeight={1.81}
         color="#333d4b"
       >

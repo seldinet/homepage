@@ -41,18 +41,20 @@ const SolutionContainer = styled.div`
   }
 `;
 
-const MainText = styled(BaseH2)`
+const ResponsiveH2 = styled(BaseH2)`
   & > span {
     color: #1461ff;
   }
 
   @media (max-width: 768px) {
+    font-size: 24px;
     text-align: center;
   }
 `;
 
 const ResponsiveText = styled(BaseParagrpah)`
   @media (max-width: 768px) {
+    font-size: 14px;
     text-align: center;
   }
 `;
@@ -74,7 +76,7 @@ export default function SolutionSection() {
     <SolutionContainer>
       <div>
         <div>
-          <MainText
+          <ResponsiveH2
             fontSize={32}
             fontWeight="bold"
             textAlign="left"
@@ -84,7 +86,7 @@ export default function SolutionSection() {
             margin="0 0 20px 0"
           >
             셀디와 함께하면 <span>한번에 해결 !</span>
-          </MainText>
+          </ResponsiveH2>
           <ResponsiveText
             fontSize={16}
             lineHeight={1.75}

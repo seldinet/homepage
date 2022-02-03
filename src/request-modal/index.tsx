@@ -75,7 +75,7 @@ const ModalImage = styled.img`
 `;
 
 export default function RequestModal() {
-  const { isOpen, close } = useRequestModal();
+  const { isOpen, close, value, isActive, setValue } = useRequestModal();
   return (
     <Modal open={isOpen} onClose={close}>
       <ModalContainer>
@@ -87,7 +87,7 @@ export default function RequestModal() {
             letterSpacing={-0.46}
             color="#222"
           >
-            셀프 서비스 신청 문의
+            셀디 서비스 신청 문의
           </BaseText>
           <CloseButton>
             <img
@@ -102,11 +102,66 @@ export default function RequestModal() {
           <ModalImage src={addPrefix("/images/request-imgage.png")} />
           <div>
             <div>
-              <LabelInput label="회사명" placeholder="회사명을 입력해주세요" />
-              <LabelInput label="이름" placeholder="이름을 입력해주세요" />
-              <LabelInput label="연락처" placeholder="01012345678" />
-              <LabelInput label="이메일 주소" placeholder="help@sedi.net" />
-              <LabelInput label="웹 사이트" placeholder="http://" />
+              <LabelInput
+                id="company"
+                label="회사명"
+                placeholder="회사명을 입력해주세요"
+                value={value.company}
+                onChange={(company) =>
+                  setValue({
+                    ...value,
+                    company: company,
+                  })
+                }
+              />
+              <LabelInput
+                id="name"
+                label="이름"
+                placeholder="이름을 입력해주세요"
+                value={value.name}
+                onChange={(name) =>
+                  setValue({
+                    ...value,
+                    name: name,
+                  })
+                }
+              />
+              <LabelInput
+                id="phoneNumber"
+                label="연락처"
+                placeholder="01012345678"
+                value={value.phoneNumber}
+                onChange={(phoneNumber) =>
+                  setValue({
+                    ...value,
+                    phoneNumber: phoneNumber,
+                  })
+                }
+              />
+              <LabelInput
+                id="email"
+                label="이메일 주소"
+                placeholder="help@sedi.net"
+                value={value.email}
+                onChange={(email) =>
+                  setValue({
+                    ...value,
+                    email: email,
+                  })
+                }
+              />
+              <LabelInput
+                id="site"
+                label="웹 사이트"
+                placeholder="http://"
+                value={value.site}
+                onChange={(site) =>
+                  setValue({
+                    ...value,
+                    site: site,
+                  })
+                }
+              />
             </div>
             <div>
               <BaseText
@@ -118,10 +173,32 @@ export default function RequestModal() {
               >
                 정보수신동의
               </BaseText>
-              <LabelCheckbox required label="개인정보 수집 및 이용동의" />
-              <LabelCheckbox label="소개서, 뉴스레터 등 셀디 정보 수신에 동의" />
+              <LabelCheckbox
+                id="required"
+                required
+                label="개인정보 수집 및 이용동의"
+                value={value.requiredAgree}
+                onChange={(requiredAgree) =>
+                  setValue({
+                    ...value,
+                    requiredAgree: requiredAgree,
+                  })
+                }
+              />
+              <LabelCheckbox
+                id="notRequired"
+                label="소개서, 뉴스레터 등 셀디 정보 수신에 동의"
+                value={value.notRequiredAgree}
+                onChange={(notRequiredAgree) =>
+                  setValue({
+                    ...value,
+                    notRequiredAgree: notRequiredAgree,
+                  })
+                }
+              />
             </div>
             <BaseButton
+              disabled={!isActive}
               borderRadius={12}
               backgroundColor="#0054ff"
               fontSize={16}

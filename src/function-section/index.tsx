@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { BaseH2 } from "../components";
+import { useRequestModal } from "../request-modal";
 import { addPrefix } from "../utils/addPrefix";
 
 import { FUNCTIONS } from "./contants";
@@ -27,23 +28,43 @@ const FunctionContainer = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
 
-    & > div {
+    & > ul {
       display: flex;
-      align-items: center;
+      justify-content: start;
+      margin: 0 auto;
+      flex-wrap: wrap;
 
-      @media (max-width: 768px) {
-        flex-direction: column;
+      @media (min-width: 675px) {
+        & > li {
+          margin-right: 32px;
+        }
       }
 
-      & > div:not(:last-child) {
-        margin-right: 32px;
+      @media (min-width: 400px) and (max-width: 674px) {
+        width: 375px;
+        & > li:not(:nth-child(2n)) {
+          margin-right: 16px;
+        }
 
-        @media (max-width: 768px) {
-          margin-right: 0;
-          margin-bottom: 10px;
+        & > li {
+          margin-bottom: 16px;
+        }
+      }
+
+      @media (max-width: 399px) {
+        flex-direction: column;
+
+        & > li {
+          margin-bottom: 16px;
         }
       }
     }
+  }
+`;
+
+const ResponsiveH2 = styled(BaseH2)`
+  @media (max-width: 768px) {
+    font-size: 24px;
   }
 `;
 
@@ -54,17 +75,23 @@ const ArrowImage = styled.img`
 `;
 
 export default function FunctionSection() {
+  const { open } = useRequestModal();
   return (
     <FunctionContainer>
-      <BaseH2 fontSize={32} fontWeight="bold" lineHeight={1.5} color="#333d4b">
+      <ResponsiveH2
+        fontSize={32}
+        fontWeight="bold"
+        lineHeight={1.5}
+        color="#333d4b"
+      >
         {"셀디는 '내 제품'에 최적화된 세일즈&마케팅 방법을 찾아드립니다."}
-      </BaseH2>
+      </ResponsiveH2>
       <ArrowImage
         src={addPrefix("/images/arrows-icon.png")}
         alt="arrows-icon"
       />
       <div>
-        <BaseH2
+        <ResponsiveH2
           fontSize={32}
           fontWeight="bold"
           lineHeight={1.5}
@@ -73,12 +100,19 @@ export default function FunctionSection() {
         >
           {`세일즈&마케팅을 진행할수록
 최적화되는 '나만의 수출 노하우'`}
-        </BaseH2>
-        <div>
+        </ResponsiveH2>
+        <ul>
           {FUNCTIONS.map(({ name, image }) => {
-            return <FunctionItem key={name} name={name} image={image} />;
+            return (
+              <FunctionItem
+                key={name}
+                name={name}
+                image={image}
+                onClick={open}
+              />
+            );
           })}
-        </div>
+        </ul>
       </div>
     </FunctionContainer>
   );

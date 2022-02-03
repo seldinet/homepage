@@ -7,11 +7,13 @@ const InputContainer = styled.div`
 `;
 
 export default function LabelInput({
+  id,
   label,
   value,
   placeholder,
   onChange,
 }: {
+  id: string;
   label: string;
   value?: string;
   placeholder?: string;
@@ -28,6 +30,7 @@ export default function LabelInput({
         {label}
       </BaseText>
       <BaseInput
+        id={id}
         value={value}
         placeholder={placeholder}
         onChange={(e) => onChange && onChange(e.target.value)}

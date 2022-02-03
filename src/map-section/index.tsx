@@ -36,14 +36,6 @@ const MapContainer = styled.div`
         margin-bottom: 55px;
       }
     }
-
-    & > div:last-child {
-      & > img:last-child {
-        @media (max-width: 768px) {
-          margin-top: -35px;
-        }
-      }
-    }
   }
 `;
 
@@ -93,9 +85,18 @@ export default function MapSection() {
             lineHeight={1.6}
             textAlign="left"
             color="#4e5968"
-            margin="0 0 66px 0"
+            margin="0 0 2px 0"
           >
             셀디 스튜디오
+          </BaseText>
+          <BaseText
+            fontSize={16}
+            lineHeight={2}
+            textAlign="left"
+            color="#4e5968"
+            margin="0 0 30px 0"
+          >
+            서울시 강남대로116길 B1 셀디스튜디오
           </BaseText>
           <Image
             src={addPrefix("/images/studio-image.png")}

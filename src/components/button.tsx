@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 interface ButtonProps {
   borderRadius?: number;
@@ -10,6 +10,7 @@ interface ButtonProps {
   letterSpacing?: number;
   fontWeight?: 400 | 500 | "bold";
   fontSize?: number;
+  disabled?: boolean;
 }
 
 export const BaseButton = styled.div<ButtonProps>`
@@ -34,4 +35,17 @@ export const BaseButton = styled.div<ButtonProps>`
   ${({ letterSpacing }) =>
     letterSpacing && `letter-spacing: ${letterSpacing}px`};
   ${({ margin }) => margin && `margin: ${margin}`};
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      pointer-events: none;
+      background-color: #f5f5f5;
+      border-color: #d9d9d9;
+      color: #00000040;
+    `}
+
+  :hover {
+    opacity: 0.7;
+  }
 `;

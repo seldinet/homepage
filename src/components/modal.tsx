@@ -21,10 +21,8 @@ export default function Modal({
   children,
 }: React.PropsWithChildren<{ open: boolean; onClose?: () => void }>) {
   return open ? (
-    <Overlay onClick={onClose}>
-      <Box role="dialog" onClick={silenceEvent}>
-        {children}
-      </Box>
+    <Overlay>
+      <Box role="dialog">{children}</Box>
     </Overlay>
   ) : null;
 }
