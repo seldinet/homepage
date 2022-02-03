@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import { init, send } from "@emailjs/browser";
 
 import { BaseButton, BaseText, Modal } from "../components";
 import { addPrefix } from "../utils/addPrefix";
@@ -76,6 +77,11 @@ const ModalImage = styled.img`
 
 export default function RequestModal() {
   const { isOpen, close, value, isActive, setValue } = useRequestModal();
+
+  useEffect(() => {
+    init("user_m7RPRxdQSybriMmBoaGWd");
+  }, []);
+
   return (
     <Modal open={isOpen} onClose={close}>
       <ModalContainer>
@@ -204,6 +210,14 @@ export default function RequestModal() {
               fontSize={16}
               lineHeight={1.81}
               letterSpacing={-0.26}
+              onClick={async () => {
+                if (!isActive) {
+                  return;
+                }
+
+                await send("service_va9x7m8", "template_f0nfrbi", { ...value });
+                close();
+              }}
             >
               셀디 신청하기
             </BaseButton>

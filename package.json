@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://dddeok.github.io/seldi-hompage",
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
