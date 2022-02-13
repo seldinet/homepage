@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { BaseText, BaseH2, BaseCheckbox } from "../components";
+import { useTranslation } from "react-i18next";
+
+import { BaseText, BaseH2 } from "../components";
 import { addPrefix } from "../utils/addPrefix";
 
 const ChartContainer = styled.div`
@@ -34,7 +36,7 @@ const ChartContainer = styled.div`
 
 const ResponsiveH2 = styled(BaseH2)`
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 22px;
   }
 `;
 
@@ -55,6 +57,7 @@ const ChartImage = styled.img`
 `;
 
 export default function ChartSection() {
+  const { t } = useTranslation("chart");
   return (
     <ChartContainer>
       <div>
@@ -68,9 +71,7 @@ export default function ChartSection() {
             color="#333d4b"
             margin="0 0 20px 0"
           >
-            {
-              "왕홍 마케팅, 입점 판매… 중국 수출 시도는 많았지만, 아직 나만의 고객을 찾지 못하셨나요?"
-            }
+            {t("chart.title")}
           </ResponsiveH2>
           <ResponsiveText
             textAlign="left"
@@ -79,9 +80,7 @@ export default function ChartSection() {
             color="#4e5968"
             margin="0 0 20px 0"
           >
-            {
-              "내 제품을 원하는 고객군을 찾고, 내 고객을 위한 마케팅에 집중하는 일. 셀디 마케팅의 시작입니다."
-            }
+            {t("chart.description")}
           </ResponsiveText>
         </div>
         <ChartImage

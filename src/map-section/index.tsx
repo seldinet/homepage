@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
+
 import { BaseText } from "../components";
 import { addPrefix } from "../utils/addPrefix";
 
@@ -50,6 +52,7 @@ const Image = styled.img`
 `;
 
 export default function MapSection() {
+  const { t } = useTranslation("map");
   return (
     <MapContainer>
       <div>
@@ -62,7 +65,7 @@ export default function MapSection() {
             color="#4e5968"
             margin="0 0 2px 0"
           >
-            오시는 길
+            {t("map.adressTitle")}
           </BaseText>
           <BaseText
             fontSize={16}
@@ -71,7 +74,7 @@ export default function MapSection() {
             color="#4e5968"
             margin="0 0 30px 0"
           >
-            서울시 강남대로364 미왕빌딩 1709
+            {t("map.adress")}
           </BaseText>
           <Image
             src={addPrefix("/images/map.png")}
@@ -87,7 +90,7 @@ export default function MapSection() {
             color="#4e5968"
             margin="0 0 2px 0"
           >
-            셀디 스튜디오
+            {t("map.studioTitle")}
           </BaseText>
           <BaseText
             fontSize={16}
@@ -96,7 +99,7 @@ export default function MapSection() {
             color="#4e5968"
             margin="0 0 30px 0"
           >
-            서울시 강남대로116길 B1 셀디스튜디오
+            {t("map.studioAdress")}
           </BaseText>
           <Image
             src={addPrefix("/images/studio-image.png")}

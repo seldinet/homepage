@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
+
 import { BaseParagrpah, BaseH2 } from "../components";
 import { addPrefix } from "../utils/addPrefix";
 
@@ -64,12 +66,14 @@ const MainText = styled(BaseH2)`
 
   @media (max-width: 768px) {
     text-align: center;
+    font-size: 24px;
   }
 `;
 
 const ResponsiveText = styled(BaseParagrpah)`
   @media (max-width: 768px) {
     text-align: center;
+    font-size: 14px;
   }
 `;
 
@@ -84,6 +88,7 @@ const DocumentImage = styled.img`
 `;
 
 export default function DocumentSection() {
+  const { t } = useTranslation("document");
   return (
     <DocumentContainer>
       <div>
@@ -107,7 +112,7 @@ export default function DocumentSection() {
             color="#333d4b"
             margin="0 0 20px 0"
           >
-            안전한 수출 운영 관리 <span>노하우</span>
+            {t("document.title")} <span>{t("document.emphasize")}</span>
           </MainText>
           <ResponsiveText
             fontSize={16}
@@ -116,8 +121,7 @@ export default function DocumentSection() {
             color="#4e5968"
             margin="0 0 28px 0"
           >
-            셀디코리아는 콰징 수출을 위한 EDI 경영허가, 콰징전자상거래 플랫폼을
-            직접 운영합니다
+            {t("document.description")}
           </ResponsiveText>
           <ResponsiveText
             fontSize={20}
@@ -126,8 +130,7 @@ export default function DocumentSection() {
             color="#4e5968"
             textAlign="left"
           >
-            서비스의 신뢰도만큼 중요한, 중국 행정의 제도적 안정성. 믿을 수 있는
-            행정 운영으로 고객사의 성공적인 중국 진출을 지원합니다.
+            {t("document.subDescription")}
           </ResponsiveText>
         </div>
       </div>

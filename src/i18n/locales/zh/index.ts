@@ -1,0 +1,9 @@
+export { default as header } from "./header";
+export { default as introduce } from "./introduce";
+export { default as chart } from "./chart";
+export { default as function } from "./function";
+export { default as solution } from "./solution";
+export { default as document } from "./document";
+export { default as map } from "./map";
+export { default as footer } from "./footer";
+export { default as request } from "./request";

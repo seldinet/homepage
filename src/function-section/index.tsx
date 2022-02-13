@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 import { BaseH2 } from "../components";
 import { useRequestModal } from "../request-modal";
@@ -64,7 +65,7 @@ const FunctionContainer = styled.div`
 
 const ResponsiveH2 = styled(BaseH2)`
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 22px;
   }
 `;
 
@@ -76,6 +77,7 @@ const ArrowImage = styled.img`
 
 export default function FunctionSection() {
   const { open } = useRequestModal();
+  const { t } = useTranslation("function");
   return (
     <FunctionContainer>
       <ResponsiveH2
@@ -84,7 +86,7 @@ export default function FunctionSection() {
         lineHeight={1.5}
         color="#333d4b"
       >
-        {"셀디는 '내 제품'에 최적화된 세일즈&마케팅 방법을 찾아드립니다."}
+        {t("function.title")}
       </ResponsiveH2>
       <ArrowImage
         src={addPrefix("/images/arrows-icon.png")}
@@ -98,11 +100,12 @@ export default function FunctionSection() {
           color="#fff"
           margin="0 0 56px 0"
         >
-          {`세일즈&마케팅을 진행할수록
-최적화되는 '나만의 수출 노하우'`}
+          {t("function.description")}
         </ResponsiveH2>
         <ul>
-          {FUNCTIONS.map(({ name, image }) => {
+          {FUNCTIONS.map(({ key, image }) => {
+            const name = t(`function.${key}`);
+
             return (
               <FunctionItem
                 key={name}

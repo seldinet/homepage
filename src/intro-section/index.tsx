@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 import { BaseButton, BaseParagrpah, BaseH1 } from "../components";
 import { useRequestModal } from "../request-modal";
@@ -31,10 +32,12 @@ const IntroContainer = styled.div`
 
 export default function IntroSection() {
   const { open } = useRequestModal();
+  const { t } = useTranslation("introduce");
   return (
     <IntroContainer>
-      <BaseH1 fontSize={40} fontWeight="bold" color="#fff">{`중국 수출 전문
-      CRM 마케팅 솔루션, 셀디`}</BaseH1>
+      <BaseH1 fontSize={40} fontWeight="bold" color="#fff">
+        {t("introduce.title")}
+      </BaseH1>
 
       <div>
         <BaseH1
@@ -43,14 +46,11 @@ export default function IntroSection() {
           lineHeight={1.6}
           color="#1461ff"
         >
-          '남들이 다 하기 때문에'
+          {t("introduce.cancel")}
         </BaseH1>
-        <BaseParagrpah
-          fontSize={20}
-          lineHeight={1.6}
-          color="#fff"
-        >{`이제, '내 제품'에 최적화된
-        세일즈&마케팅에 집중하세요`}</BaseParagrpah>
+        <BaseParagrpah fontSize={20} lineHeight={1.6} color="#fff">
+          {t("introduce.subTitle")}
+        </BaseParagrpah>
         <BaseButton
           borderRadius={8}
           fontSize={18}
@@ -60,7 +60,7 @@ export default function IntroSection() {
           margin="40px 0 0 0"
           onClick={open}
         >
-          상담 신청
+          {t("introduce.button")}
         </BaseButton>
       </div>
     </IntroContainer>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { init, send } from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 import { BaseButton, BaseText, Modal } from "../components";
 import { addPrefix } from "../utils/addPrefix";
@@ -76,6 +77,7 @@ const ModalImage = styled.img`
 `;
 
 export default function RequestModal() {
+  const { t } = useTranslation("request");
   const { isOpen, close, value, isActive, setValue } = useRequestModal();
 
   useEffect(() => {
@@ -93,7 +95,7 @@ export default function RequestModal() {
             letterSpacing={-0.46}
             color="#222"
           >
-            셀디 서비스 신청 문의
+            {t("request.title")}
           </BaseText>
           <CloseButton>
             <img
@@ -110,8 +112,8 @@ export default function RequestModal() {
             <div>
               <LabelInput
                 id="company"
-                label="회사명"
-                placeholder="회사명을 입력해주세요"
+                label={t("request.company")}
+                placeholder={t("request.companyPlaceholder")}
                 value={value.company}
                 onChange={(company) =>
                   setValue({
@@ -122,8 +124,8 @@ export default function RequestModal() {
               />
               <LabelInput
                 id="name"
-                label="이름"
-                placeholder="이름을 입력해주세요"
+                label={t("request.name")}
+                placeholder={t("request.namePlaceholder")}
                 value={value.name}
                 onChange={(name) =>
                   setValue({
@@ -134,7 +136,7 @@ export default function RequestModal() {
               />
               <LabelInput
                 id="phoneNumber"
-                label="연락처"
+                label={t("request.phoneNumber")}
                 placeholder="01012345678"
                 value={value.phoneNumber}
                 onChange={(phoneNumber) =>
@@ -146,7 +148,7 @@ export default function RequestModal() {
               />
               <LabelInput
                 id="email"
-                label="이메일 주소"
+                label={t("request.email")}
                 placeholder="help@sedi.net"
                 value={value.email}
                 onChange={(email) =>
@@ -158,7 +160,7 @@ export default function RequestModal() {
               />
               <LabelInput
                 id="site"
-                label="웹 사이트"
+                label={t("request.site")}
                 placeholder="http://"
                 value={value.site}
                 onChange={(site) =>
@@ -177,12 +179,12 @@ export default function RequestModal() {
                 color="#333d4b"
                 margin="0 0 12px !important"
               >
-                정보수신동의
+                {t("request.agreeTitle")}
               </BaseText>
               <LabelCheckbox
                 id="required"
                 required
-                label="개인정보 수집 및 이용동의"
+                label={t("request.requiredDescription")}
                 value={value.requiredAgree}
                 onChange={(requiredAgree) =>
                   setValue({
@@ -193,7 +195,7 @@ export default function RequestModal() {
               />
               <LabelCheckbox
                 id="notRequired"
-                label="소개서, 뉴스레터 등 셀디 정보 수신에 동의"
+                label={t("request.notRequiredDescription")}
                 value={value.notRequiredAgree}
                 onChange={(notRequiredAgree) =>
                   setValue({
@@ -219,7 +221,7 @@ export default function RequestModal() {
                 close();
               }}
             >
-              셀디 신청하기
+              {t("request.button")}
             </BaseButton>
           </div>
         </div>

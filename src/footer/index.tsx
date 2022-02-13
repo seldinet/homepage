@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
+
 import { BaseText } from "../components";
 import { addPrefix } from "../utils/addPrefix";
 
@@ -48,6 +50,7 @@ const FooterImage = styled.img`
 `;
 
 export default function Footer() {
+  const { t } = useTranslation("footer");
   return (
     <FooterContainer>
       <div>
@@ -63,9 +66,7 @@ export default function Footer() {
             color="#b5b5b5"
             margin="0 0 12px 0"
           >
-            {
-              "(주)셀디코리아 | 서울시 강남대로364 미왕빌딩 1709 | 대표 : 이창헌 | 사업자등록번호 : 568-88-02012"
-            }
+            {t("footer.seldiInformation")}
           </BaseText>
           <BaseText
             fontSize={14}
@@ -74,7 +75,7 @@ export default function Footer() {
             color="#b5b5b5"
             margin="0 0 20px 0"
           >
-            {"전화 : 02-6958-8556 | 팩스 : 0504-051-2750"}
+            {t("footer.seldiNumber")}
           </BaseText>
           <BaseText
             fontSize={14}
@@ -93,7 +94,7 @@ export default function Footer() {
             color="#b5b5b5"
             margin="0 0 8px 0"
           >
-            상담문의
+            {t("footer.consultingTitle")}
           </BaseText>
           <BaseText
             fontSize={32}
@@ -111,8 +112,7 @@ export default function Footer() {
             textAlign="left"
             color="#b5b5b5"
           >
-            {`평일  09:00-18:00(점심 11:30-12:30)
-토/일/공휴일 휴무`}
+            {t("footer.consultingTime")}
           </BaseText>
         </div>
       </div>

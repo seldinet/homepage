@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-
+import { useTranslation } from "react-i18next";
 import { BaseText, BaseCheckbox } from "../components";
 
 const CheckboxContainer = styled.div`
@@ -37,6 +37,7 @@ export default function LabelCheckbox({
   value?: boolean;
   onChange?: (value: boolean) => void;
 }) {
+  const { t } = useTranslation("request");
   return (
     <CheckboxContainer>
       <BaseCheckbox
@@ -52,7 +53,12 @@ export default function LabelCheckbox({
         lineHeight={1.81}
         color="#333d4b"
       >
-        <span>{required ? "(필수)" : "(선택)"}</span> {label}
+        <span>
+          {required
+            ? `(${t("request.required")})`
+            : `(${t("request.notRequired")})`}
+        </span>{" "}
+        {label}
       </RequiredText>
     </CheckboxContainer>
   );

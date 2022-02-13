@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 import { BaseText } from "../components";
 import { useRequestModal } from "../request-modal";
@@ -79,6 +80,7 @@ const MenuIcon = styled.img`
 
 export default function Header() {
   const { open } = useRequestModal();
+  const { t } = useTranslation("header");
   return (
     <HeaderContainer>
       <div>
@@ -91,15 +93,15 @@ export default function Header() {
         </MoreButton>
         <div>
           <BaseText fontSize={16} lineHeight={1.61} color="#fff">
-            셀디 소개
+            {t("header.introduce")}
           </BaseText>
           <BaseText fontSize={16} lineHeight={1.61} color="#fff">
-            매뉴얼
+            {t("header.manual")}
           </BaseText>
         </div>
         <div>
           <BaseText opacity={0.8} fontSize={16} lineHeight={1.61} color="#fff">
-            로그인
+            {t("header.login")}
           </BaseText>
           <BaseText
             onClick={open}
@@ -108,7 +110,7 @@ export default function Header() {
             lineHeight={1.61}
             color="#fff"
           >
-            문의하기
+            {t("header.question")}
           </BaseText>
         </div>
       </div>

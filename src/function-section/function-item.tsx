@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
+
 import { BaseButton, BaseText } from "../components";
 
 const ItemContainer = styled.li`
@@ -29,6 +31,7 @@ export default function FunctionItem({
   image: string;
   onClick?: () => void;
 }) {
+  const { t } = useTranslation("function");
   return (
     <ItemContainer>
       <BaseText fontSize={16} lineHeight={3} color="#fff" margin="0 0 16px 0">
@@ -42,7 +45,7 @@ export default function FunctionItem({
         fontSize={12}
         onClick={onClick}
       >
-        신청하기
+        {t("function.button")}
       </BaseButton>
     </ItemContainer>
   );
