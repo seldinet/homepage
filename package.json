@@ -1,6 +1,6 @@
 {
   "name": "seldi-homepage",
-  "homepage": "https://sel-di.netlify.app",
+  "homepage": "https://seldi.netlify.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
