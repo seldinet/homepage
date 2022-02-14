@@ -2,7 +2,6 @@
   "name": "seldi-homepage",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://dddeok.github.io/seldi-hompage",
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
     "@testing-library/jest-dom": "^5.16.1",
