@@ -4,4 +4,6 @@ import * as localeZh from "./zh";
 export const kr = { ...localeKr };
 export const zh = { ...localeZh };
 
-export default { kr, zh };
+const locales = { kr, zh };
+
+export default locales;
