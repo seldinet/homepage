@@ -86,7 +86,7 @@ export default function FunctionSection() {
         lineHeight={1.5}
         color="#333d4b"
       >
-        {t("function.title")}
+        {t("func.title")}
       </ResponsiveH2>
       <ArrowImage
         src={addPrefix("/images/arrows-icon.png")}

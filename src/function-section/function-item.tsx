@@ -31,7 +31,7 @@ export default function FunctionItem({
   image: string;
   onClick?: () => void;
 }) {
-  const { t } = useTranslation("function");
+  const { t } = useTranslation("func");
   return (
     <ItemContainer>
       <BaseText fontSize={16} lineHeight={3} color="#fff" margin="0 0 16px 0">
@@ -45,7 +45,7 @@ export default function FunctionItem({
         fontSize={12}
         onClick={onClick}
       >
-        {t("function.button")}
+        {t("func.button")}
       </BaseButton>
     </ItemContainer>
   );

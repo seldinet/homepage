@@ -1,7 +1,7 @@
 export { header } from "./header";
 export { introduce } from "./introduce";
 export { chart } from "./chart";
-export { func } from "./function";
+export { func } from "./func";
 export { solution } from "./solution";
 export { document } from "./document";
 export { map } from "./map";
