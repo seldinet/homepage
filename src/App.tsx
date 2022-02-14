@@ -14,8 +14,8 @@ import RequestModal, { RequestModalProvider } from "./request-modal";
 
 function App() {
   return (
-    <div>
-      <RequestModalProvider>
+    <RequestModalProvider>
+      <div>
         <Header />
         <IntroSection />
         <PartnerSection />
@@ -26,8 +26,8 @@ function App() {
         <MapSection />
         <Footer />
         <RequestModal />
-      </RequestModalProvider>
-    </div>
+      </div>
+    </RequestModalProvider>
   );
 }
 

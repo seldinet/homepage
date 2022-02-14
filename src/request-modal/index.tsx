@@ -99,6 +99,7 @@ export default function RequestModal() {
           </BaseText>
           <CloseButton>
             <img
+              alt="close-icon"
               width={35}
               height={35}
               src={addPrefix("/images/close-icon.png")}
