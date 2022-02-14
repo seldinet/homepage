@@ -1,4 +1,4 @@
-export default {
+export const introduce = {
   mode: "kr",
   introduce: {
     title: `중국 수출 전문

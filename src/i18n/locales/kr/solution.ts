@@ -1,4 +1,4 @@
-export default {
+export const solution = {
   mode: "kr",
   solution: {
     title: "셀디와 함께하면,",

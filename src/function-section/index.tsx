@@ -77,7 +77,7 @@ const ArrowImage = styled.img`
 
 export default function FunctionSection() {
   const { open } = useRequestModal();
-  const { t } = useTranslation("function");
+  const { t } = useTranslation("func");
   return (
     <FunctionContainer>
       <ResponsiveH2
@@ -100,11 +100,11 @@ export default function FunctionSection() {
           color="#fff"
           margin="0 0 56px 0"
         >
-          {t("function.description")}
+          {t("func.description")}
         </ResponsiveH2>
         <ul>
           {FUNCTIONS.map(({ key, image }) => {
-            const name = t(`function.${key}`);
+            const name = t(`func.${key}`);
 
             return (
               <FunctionItem

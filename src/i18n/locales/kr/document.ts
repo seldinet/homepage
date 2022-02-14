@@ -1,4 +1,4 @@
-export default {
+export const document = {
   mode: "kr",
   document: {
     title: "안전한 수출 운영 관리",

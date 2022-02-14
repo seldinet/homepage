@@ -1,4 +1,4 @@
-export default {
+export const map = {
   mode: "kr",
   map: {
     adressTitle: "오시는 길",

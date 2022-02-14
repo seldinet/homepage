@@ -1,4 +1,4 @@
-export default {
+export const request = {
   mode: "zh",
   request: {
     title: "SEL-DI服务申请咨询",

@@ -1,4 +1,4 @@
-export default {
+export const document = {
   mode: "zh",
   document: {
     title: "安全的出口运营管理",

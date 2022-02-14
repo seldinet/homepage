@@ -1,4 +1,4 @@
-export default {
+export const func = {
   mode: "zh",
   function: {
     title: "SEL-DI 帮您找寻最适合 ‘产品’ 的销售与营销方法。",

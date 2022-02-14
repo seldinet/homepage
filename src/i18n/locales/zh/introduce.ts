@@ -1,4 +1,4 @@
-export default {
+export const introduce = {
   mode: "zh",
   introduce: {
     title: `专为出口中国服务

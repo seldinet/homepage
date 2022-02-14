@@ -1,4 +1,4 @@
-export default {
+export const solution = {
   mode: "zh",
   solution: {
     title: "与SEL-DI合作，",

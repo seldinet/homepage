@@ -1,4 +1,4 @@
-export default {
+export const map = {
   mode: "zh",
   map: {
     adressTitle: "地址",

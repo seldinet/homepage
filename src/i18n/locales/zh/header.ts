@@ -1,4 +1,4 @@
-export default {
+export const header = {
   mode: "zh",
   header: {
     introduce: "SEL-DI介绍",

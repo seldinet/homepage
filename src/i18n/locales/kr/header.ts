@@ -1,4 +1,4 @@
-export default {
+export const header = {
   mode: "kr",
   header: {
     introduce: "셀디 소개",

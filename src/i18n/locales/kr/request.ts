@@ -1,4 +1,4 @@
-export default {
+export const request = {
   mode: "kr",
   request: {
     title: "셀디 서비스 신청 문의",

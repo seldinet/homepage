@@ -1,4 +1,4 @@
-export default {
+export const chart = {
   mode: "kr",
   chart: {
     title:
