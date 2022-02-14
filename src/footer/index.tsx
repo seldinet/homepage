@@ -83,7 +83,7 @@ export default function Footer() {
             textAlign="left"
             color="#888"
           >
-            {"©SELDIKOREA ALL Rights Reserved."}
+            {"©Youyishou Co,LTD ALL Rights Reserved."}
           </BaseText>
         </div>
         <div>
