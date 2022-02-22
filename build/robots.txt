@@ -1,3 +1,0 @@
-# https://www.robotstxt.org/robotstxt.html, https://searchadvisor.naver.com/guide/seo-basic-robots
-User-agent: *
-Allow: /
