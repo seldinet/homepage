@@ -4,21 +4,12 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import { kr, zh } from "./locales";
 
-const resources = {
-  kr: {
-    translation: kr,
-  },
-  en: {
-    translation: zh,
-  },
-};
-
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    resources,
-    fallbackLng: ["kr", "zh"],
+    resources: { kr, en: zh },
+    fallbackLng: ["kr", "en"],
     interpolation: { escapeValue: false },
   });
 
