@@ -9,10 +9,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources: { kr, zh },
-    lng: "kr",
     fallbackLng: ["kr", "zh"],
     interpolation: { escapeValue: false },
-    detection: { order: ["path", "navigator"] },
   });
 
 export default i18n;
