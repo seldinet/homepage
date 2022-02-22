@@ -1,5 +1,5 @@
 export const request = {
-  mode: "kr",
+  mode: "ko",
   request: {
     title: "셀디 서비스 신청 문의",
     company: "회사명",

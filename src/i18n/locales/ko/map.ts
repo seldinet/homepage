@@ -1,5 +1,5 @@
 export const map = {
-  mode: "kr",
+  mode: "ko",
   map: {
     adressTitle: "오시는 길",
     adress: "서울시 강남대로364 미왕빌딩 1709",

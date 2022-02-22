@@ -1,5 +1,5 @@
 export const introduce = {
-  mode: "kr",
+  mode: "ko",
   introduce: {
     title: `중국 수출 전문
       CRM 마케팅 솔루션, 셀디`,

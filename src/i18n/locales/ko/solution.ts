@@ -1,5 +1,5 @@
 export const solution = {
-  mode: "kr",
+  mode: "ko",
   solution: {
     title: "셀디와 함께하면,",
     emphasize: "한번에 해결 !",

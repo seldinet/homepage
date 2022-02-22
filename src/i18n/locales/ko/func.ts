@@ -1,5 +1,5 @@
 export const func = {
-  mode: "kr",
+  mode: "ko",
   func: {
     title: "셀디는 '내 제품'에 최적화된 세일즈&마케팅 방법을 찾아드립니다.",
     description: `세일즈&마케팅을 진행할수록

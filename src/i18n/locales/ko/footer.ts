@@ -1,5 +1,5 @@
 export const footer = {
-  mode: "kr",
+  mode: "ko",
   footer: {
     seldiInformation:
       "(주) 유이수 주식회사 | 서울시 강남대로364 미왕빌딩 1709 | 대표 : 이창헌 | 사업자등록번호 : 568-88-02012",

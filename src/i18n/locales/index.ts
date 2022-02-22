@@ -1,9 +1,9 @@
-import * as localeKr from "./kr";
+import * as localeKO from "./ko";
 import * as localeZh from "./zh";
 
-export const kr = { ...localeKr };
+export const ko = { ...localeKO };
 export const zh = { ...localeZh };
 
-const locales = { kr, zh };
+const locales = { ko, zh };
 
 export default locales;

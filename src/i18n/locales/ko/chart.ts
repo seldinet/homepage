@@ -1,5 +1,5 @@
 export const chart = {
-  mode: "kr",
+  mode: "ko",
   chart: {
     title:
       "왕홍 마케팅, 입점 판매… 중국 수출 시도는 많았지만, 아직 나만의 고객을 찾지 못하셨나요?",

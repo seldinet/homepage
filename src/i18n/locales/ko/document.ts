@@ -1,5 +1,5 @@
 export const document = {
-  mode: "kr",
+  mode: "ko",
   document: {
     title: "안전한 수출 운영 관리",
     emphasize: "노하우",

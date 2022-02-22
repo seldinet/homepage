@@ -1,5 +1,5 @@
 export const header = {
-  mode: "kr",
+  mode: "ko",
   header: {
     introduce: "셀디 소개",
     manual: "메뉴얼",
