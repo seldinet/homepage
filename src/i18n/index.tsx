@@ -11,7 +11,7 @@ i18n
     resources: { ko, "zh-CN": zh },
     fallbackLng: "zh-CN",
     interpolation: { escapeValue: false },
-    debug: true,
+    debug: false,
   });
 
 export default i18n;
