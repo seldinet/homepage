@@ -4,10 +4,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home";
 
+const KOREAN_LANGUAGE = ["ko", "ko_kr", "ko_KR"];
+
 function App() {
   useEffect(() => {
     const language = window.navigator.language;
-    i18n.changeLanguage(language);
+    const isKoreaLanguage = KOREAN_LANGUAGE.includes(language);
+
+    i18n.changeLanguage(isKoreaLanguage ? "ko" : language);
   }, []);
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
