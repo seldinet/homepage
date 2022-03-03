@@ -98,6 +98,13 @@ export default function Header() {
           <BaseText fontSize={16} lineHeight={1.61} color="#fff">
             {t("header.manual")}
           </BaseText>
+          <div>
+            <a href="https://seldikorea.recruitin.co.kr/jobs">
+              <BaseText fontSize={16} lineHeight={1.61} color="#fff">
+                {t("header.recruit")}
+              </BaseText>
+            </a>
+          </div>
         </div>
         <div>
           <BaseText opacity={0.8} fontSize={16} lineHeight={1.61} color="#fff">
