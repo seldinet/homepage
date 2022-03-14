@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
-import { BaseH2, BaseParagrpah } from "../components";
-import { addPrefix } from "../utils/addPrefix";
+import { BaseH2, BaseParagrpah } from "../../components";
+import { addPrefix } from "../../utils/addPrefix";
 
 const SolutionContainer = styled.div`
   width: 100%;

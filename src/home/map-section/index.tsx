@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
-import { BaseText } from "../components";
-import { addPrefix } from "../utils/addPrefix";
+import { BaseText } from "../../components";
+import { addPrefix } from "../../utils/addPrefix";
 
 const MapContainer = styled.div`
   width: 100%;

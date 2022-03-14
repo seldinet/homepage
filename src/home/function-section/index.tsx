@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
-import { BaseH2 } from "../components";
-import { useRequestModal } from "../request-modal";
-import { addPrefix } from "../utils/addPrefix";
+import { BaseH2 } from "../../components";
+import { useRequestModal } from "../../request-modal";
+import { addPrefix } from "../../utils/addPrefix";
 
 import { FUNCTIONS } from "./contants";
 import FunctionItem from "./function-item";

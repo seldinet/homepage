@@ -1,4 +1,4 @@
-import { addPrefix } from "../utils/addPrefix";
+import { addPrefix } from "../../utils/addPrefix";
 
 export const FUNCTIONS = [
   {

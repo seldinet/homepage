@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
-import { BaseButton, BaseParagrpah, BaseH1 } from "../components";
-import { useRequestModal } from "../request-modal";
-import { addPrefix } from "../utils/addPrefix";
+import { BaseButton, BaseParagrpah, BaseH1 } from "../../components";
+import { useRequestModal } from "../../request-modal";
+import { addPrefix } from "../../utils/addPrefix";
 
 const IntroContainer = styled.div`
   display: flex;

@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
-import { BaseText, BaseH2 } from "../components";
-import { addPrefix } from "../utils/addPrefix";
+import { BaseText, BaseH2 } from "../../components";
+import { addPrefix } from "../../utils/addPrefix";
 
 const ChartContainer = styled.div`
   display: flex;

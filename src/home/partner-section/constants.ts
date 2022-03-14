@@ -1,4 +1,4 @@
-import { addPrefix } from "../utils/addPrefix";
+import { addPrefix } from "../../utils/addPrefix";
 
 export const PARTNERS = [
   { name: "shilla", image: addPrefix("/images/logo/shilla.png"), size: 68 },
