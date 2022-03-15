@@ -6,9 +6,9 @@ import { BaseText } from "../components";
 import { useRequestModal } from "../request-modal";
 import { addPrefix } from "../utils/addPrefix";
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.div<{ backgroundColor: string }>`
   width: 100%;
-  background-color: #00135f;
+  background-color: ${({ backgroundColor }) => backgroundColor};
   box-sizing: border-box;
   padding: 0 20px;
 
@@ -78,36 +78,36 @@ const MenuIcon = styled.img`
   }
 `;
 
-export default function Header() {
+export default function Header({ primary = true } : { primary?: boolean }) {
   const { open } = useRequestModal();
   const { t } = useTranslation("header");
   return (
-    <HeaderContainer>
+    <HeaderContainer backgroundColor={primary ? '#00135f' : '#fff' }>
       <div>
         <HeaderLogo
-          src={addPrefix("/images/header-logo.png")}
+          src={primary ? addPrefix("/images/header-logo.png") : addPrefix("/images/header-logo-blue.png")}
           alt="seldi-logo"
         />
         <MoreButton>
           <MenuIcon src={addPrefix("/images/menu-icon.png")} alt="menu-icon" />
         </MoreButton>
         <div>
-          <BaseText fontSize={16} lineHeight={1.61} color="#fff">
+          <BaseText fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#333d4b'}>
             {t("header.introduce")}
           </BaseText>
-          <BaseText fontSize={16} lineHeight={1.61} color="#fff">
+          <BaseText fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#333d4b'}>
             {t("header.manual")}
           </BaseText>
           <div>
             <a href="https://seldikorea.recruitin.co.kr/jobs">
-              <BaseText fontSize={16} lineHeight={1.61} color="#fff">
+              <BaseText fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#333d4b'}>
                 {t("header.recruit")}
               </BaseText>
             </a>
           </div>
         </div>
         <div>
-          <BaseText opacity={0.8} fontSize={16} lineHeight={1.61} color="#fff">
+          <BaseText opacity={0.8} fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#435968'}>
             {t("header.login")}
           </BaseText>
           <BaseText
@@ -115,7 +115,7 @@ export default function Header() {
             opacity={0.8}
             fontSize={16}
             lineHeight={1.61}
-            color="#fff"
+            color={primary ? '#fff' : '#435968'}
           >
             {t("header.question")}
           </BaseText>
