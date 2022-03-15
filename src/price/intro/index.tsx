@@ -10,6 +10,7 @@ const IntroContainer = styled.div`
 
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 
   width: 100%;
   height: 520px;
@@ -19,7 +20,7 @@ const IntroContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 
-  padding: 30px 0;
+  padding: 30px 30px;
 
   & > div {
     margin-top: 30px;
