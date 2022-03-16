@@ -95,9 +95,13 @@ export default function Header({ primary = true } : { primary?: boolean }) {
           <BaseText fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#333d4b'}>
             {t("header.introduce")}
           </BaseText>
-          <BaseText fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#333d4b'}>
-            {t("header.manual")}
-          </BaseText>
+          <div>
+            <a href="/price">
+              <BaseText fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#333d4b'}>
+                  {t("header.manual")}
+              </BaseText>  
+            </a>
+          </div>
           <div>
             <a href="https://seldikorea.recruitin.co.kr/jobs">
               <BaseText fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#333d4b'}>
