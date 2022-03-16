@@ -69,10 +69,10 @@ export default function Plan() {
 지금 바로 50% 할인된 가격으로 서비스를 이용해보세요.(월 플랜 최소 사용 기간 4개월)`}
                 </BaseText>
                 <ul>
-                    <PlanItem title={PLAN["STARTER"].title} description={PLAN["STARTER"].description} basePrice={PLAN["STARTER"].basePrice} price={PLAN["STARTER"].price} rate={PLAN["STARTER"].rate} functionList={PLAN["STARTER"].function}/>
-                    <PlanItem title={PLAN["EXPERT"].title} description={PLAN["EXPERT"].description} basePrice={PLAN["EXPERT"].basePrice} price={PLAN["EXPERT"].price} rate={PLAN["EXPERT"].rate} functionList={PLAN["EXPERT"].function}/>
-                    <PlanItem title={PLAN["LEADER"].title} description={PLAN["LEADER"].description} basePrice={PLAN["LEADER"].basePrice} price={PLAN["LEADER"].price} rate={PLAN["LEADER"].rate} functionList={PLAN["LEADER"].function}/>
-                    <PlanItem isEnterprise title={PLAN["ENTERPRISE"].title} description={PLAN["ENTERPRISE"].description} basePrice={PLAN["ENTERPRISE"].basePrice} price={PLAN["ENTERPRISE"].price} rate={PLAN["ENTERPRISE"].rate} functionList={PLAN["ENTERPRISE"].function}/>
+                    <PlanItem title={PLAN["STARTER"].title} description={PLAN["STARTER"].description} basePrice={PLAN["STARTER"]['month'].basePrice} price={PLAN["STARTER"]['month'].price} rate={PLAN["STARTER"].rate} functionList={PLAN["STARTER"].function}/>
+                    <PlanItem title={PLAN["EXPERT"].title} description={PLAN["EXPERT"].description} basePrice={PLAN["EXPERT"]['month'].basePrice} price={PLAN["EXPERT"]['month'].price} rate={PLAN["EXPERT"].rate} functionList={PLAN["EXPERT"].function}/>
+                    <PlanItem title={PLAN["LEADER"].title} description={PLAN["LEADER"].description} basePrice={PLAN["LEADER"]['month'].basePrice} price={PLAN["LEADER"]['month'].price} rate={PLAN["LEADER"].rate} functionList={PLAN["LEADER"].function}/>
+                    <PlanItem isEnterprise title={PLAN["ENTERPRISE"].title} description={PLAN["ENTERPRISE"].description} basePrice={PLAN["ENTERPRISE"]['month'].basePrice} price={PLAN["ENTERPRISE"]['month'].price} rate={PLAN["ENTERPRISE"].rate} functionList={PLAN["ENTERPRISE"].function}/>
                 </ul>
             </div>
         </PlanContainer>

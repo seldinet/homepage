@@ -4,8 +4,14 @@ export const PLAN = {
         title: 'Starter',
         description: `중국 수출,  중국인 고객 마케팅을 시작하는
         기업`,
-        basePrice: 360,
-        price: 180,
+        month: {
+            basePrice: 30,
+            price: 15,
+        },
+        year: {
+            basePrice: 360,
+            price: 180,
+        },
         rate: 50,
         function: [
             '고객 세그먼트 관리 기능',
@@ -20,8 +26,14 @@ export const PLAN = {
         title: 'Expert',
         description: `중국 자사몰을 통한 직접 수출을
         목표로 하는 기업 (미니앱 무료 구축)`,
-        basePrice: 960,
-        price: 480,
+        month: {
+            basePrice: 80,
+            price: 40,
+        },
+        year: {
+            basePrice: 960,
+            price: 480,
+        },
         rate: 50,
         function: [
             'Starter의 모든 기능',
@@ -37,8 +49,14 @@ export const PLAN = {
         title: 'Leader',
         description: `수익율 향상을 목표로 전문화된
         CRM 마케팅이 필요한 기업`,
-        basePrice: 1440,
-        price: 1000,
+        month: {
+            basePrice: 120,
+            price: 90,
+        },
+        yeadr: {
+            basePrice: 1440,
+            price: 1000,
+        },
         rate: 30,
         function: [
             'Expert의 모든 기능',
@@ -56,8 +74,14 @@ export const PLAN = {
         title: 'Enterprise',
         description: `기업 맞춤형 플랜
         기업 맞춤 커스터마이징 개발`,
-        basePrice: '커스터마이징',
-        price: '연간플랜',
+        month: {
+            basePrice: '커스터마이징',
+            price: '월간플랜',
+        },
+        year: {
+            basePrice: '커스터마이징',
+            price: '연간',
+        },
         rate: 70,
         function: [
             '기업의 중국인 고객 관리 기능에 최적화된 솔루션 개발',
