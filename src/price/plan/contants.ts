@@ -53,7 +53,7 @@ export const PLAN = {
             basePrice: 120,
             price: 90,
         },
-        yeadr: {
+        year: {
             basePrice: 1440,
             price: 1000,
         },
@@ -80,7 +80,7 @@ export const PLAN = {
         },
         year: {
             basePrice: '커스터마이징',
-            price: '연간',
+            price: '연간플랜',
         },
         rate: 70,
         function: [

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { BaseText, BaseHR } from '../../components'
+import { BaseText, BaseHR, BaseSwitch} from '../../components'
 
 const Container = styled.li`
     display: flex;
@@ -68,20 +68,32 @@ display: block;
     margin-bottom: 28px;
 `
 
-export default function PlanItem({title, description, basePrice, price, rate, functionList, isEnterprise} : {title: string, description: string, basePrice: string | number, price:string | number, rate: string | number, functionList: string[], isEnterprise?: boolean}) {
+interface PriceItemProps {
+    title: string, 
+    description: string, 
+    basePrice: string | number, 
+    price:string | number, rate: string | number, 
+    functionList: string[], 
+    isEnterprise?: boolean,
+    plan: {key: string, title: string}
+    onChangePlan?: (plan: {key: string, title: string}) => void
+}
+
+export default function PlanItem({title, description, basePrice, price, rate, functionList, isEnterprise, plan, onChangePlan} : PriceItemProps) {
     return (
         <Container>
             <div>
-                <BaseText fontWeight="bold" textAlign='left' lineHeight={1.21} color="#333d4b" fontSize={24}>
+                <BaseText margin="0 auto 0 0" fontWeight="bold" textAlign='left' lineHeight={1.21} color="#333d4b" fontSize={24}>
                     {title}
                 </BaseText>
+                {isEnterprise ? null : <BaseSwitch onChange={onChangePlan} selectedValue={plan} values={[{ key: 'month', title: '월 플랜' }, { key: 'year', title: '연 플랜' }]}/>}    
             </div>
             <BaseText textAlign="left" fontSize={14} lineHeight={1.43} color="#888">
                 {description}
             </BaseText>
             <BaseHR margin="20px 0"/>
             <PriceText margin="0 0 8px" fontSize={36} fontWeight="bold" color="#333d4b">
-                {price}{isEnterprise ? null : '만원'} {isEnterprise ? null : <span>/월</span>}
+                {price}{isEnterprise ? null : '만원'} {isEnterprise ? null : <span>{plan.key === 'month' ? '/월' : '/년'}</span>}
             </PriceText>
             <RateText isEnterprise={isEnterprise} margin="0 0 30px" fontSize={14} lineHeight={1.71} color="#e32604">
                 (<span>{basePrice}{isEnterprise ? null : '만원'}</span> {isEnterprise ? '최대' : null} {rate}%할인)

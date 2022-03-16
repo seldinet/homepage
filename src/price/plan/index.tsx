@@ -1,4 +1,5 @@
 
+import { useState, useCallback } from 'react'
 import styled from 'styled-components'
 
 import { BaseH2, BaseText } from '../../components'
@@ -58,6 +59,18 @@ const PlanContainer = styled.div`
 
 
 export default function Plan() {
+    const [plan,setPlan] = useState({
+        key: 'month',
+        title: '월 플랜'
+    })
+
+    const handlePlan = useCallback((plan: {key: string, title: string}) => {
+        setPlan(plan)
+    },[])
+
+
+    const divdedValue = plan.key as 'month' | 'year'
+
     return (
         <PlanContainer>
             <div>
@@ -69,10 +82,10 @@ export default function Plan() {
 지금 바로 50% 할인된 가격으로 서비스를 이용해보세요.(월 플랜 최소 사용 기간 4개월)`}
                 </BaseText>
                 <ul>
-                    <PlanItem title={PLAN["STARTER"].title} description={PLAN["STARTER"].description} basePrice={PLAN["STARTER"]['month'].basePrice} price={PLAN["STARTER"]['month'].price} rate={PLAN["STARTER"].rate} functionList={PLAN["STARTER"].function}/>
-                    <PlanItem title={PLAN["EXPERT"].title} description={PLAN["EXPERT"].description} basePrice={PLAN["EXPERT"]['month'].basePrice} price={PLAN["EXPERT"]['month'].price} rate={PLAN["EXPERT"].rate} functionList={PLAN["EXPERT"].function}/>
-                    <PlanItem title={PLAN["LEADER"].title} description={PLAN["LEADER"].description} basePrice={PLAN["LEADER"]['month'].basePrice} price={PLAN["LEADER"]['month'].price} rate={PLAN["LEADER"].rate} functionList={PLAN["LEADER"].function}/>
-                    <PlanItem isEnterprise title={PLAN["ENTERPRISE"].title} description={PLAN["ENTERPRISE"].description} basePrice={PLAN["ENTERPRISE"]['month'].basePrice} price={PLAN["ENTERPRISE"]['month'].price} rate={PLAN["ENTERPRISE"].rate} functionList={PLAN["ENTERPRISE"].function}/>
+                    <PlanItem plan={plan} onChangePlan={handlePlan} title={PLAN["STARTER"].title} description={PLAN["STARTER"].description} basePrice={PLAN["STARTER"][divdedValue].basePrice} price={PLAN["STARTER"][divdedValue].price} rate={PLAN["STARTER"].rate} functionList={PLAN["STARTER"].function}/>
+                    <PlanItem plan={plan} onChangePlan={handlePlan} title={PLAN["EXPERT"].title} description={PLAN["EXPERT"].description} basePrice={PLAN["EXPERT"][divdedValue].basePrice} price={PLAN["EXPERT"][divdedValue].price} rate={PLAN["EXPERT"].rate} functionList={PLAN["EXPERT"].function}/>
+                    <PlanItem plan={plan} onChangePlan={handlePlan} title={PLAN["LEADER"].title} description={PLAN["LEADER"].description} basePrice={PLAN["LEADER"][divdedValue].basePrice} price={PLAN["LEADER"][divdedValue].price} rate={PLAN["LEADER"].rate} functionList={PLAN["LEADER"].function}/>
+                    <PlanItem plan={plan} onChangePlan={handlePlan} isEnterprise title={PLAN["ENTERPRISE"].title} description={PLAN["ENTERPRISE"].description} basePrice={PLAN["ENTERPRISE"][divdedValue].basePrice} price={PLAN["ENTERPRISE"][divdedValue].price} rate={PLAN["ENTERPRISE"].rate} functionList={PLAN["ENTERPRISE"].function}/>
                 </ul>
             </div>
         </PlanContainer>
