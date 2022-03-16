@@ -16,6 +16,7 @@ const SwitchItem = styled.div<{ selected?: boolean }>`
     border-radius: 6px;
     font-size: 12px;
     line-height: 1.67;
+    box-sizing: border-box;
     cursor: pointer;
 
     ${({ selected }) => selected ? css`

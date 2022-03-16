@@ -31,6 +31,10 @@ const Container = styled.li`
             line-height: 1.75;
             color: #4e5968;
             margin-bottom: 2px;
+
+            @media(max-width: 479px) {
+                font-size: 14px;
+            }
         }
     }
 `

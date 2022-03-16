@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface TextProps {
-  fontWeight?: 400 | 500 | "bold";
+  fontWeight?: 400 | 500 | 600 |"bold";
   fontSize?: number;
   opacity?: number;
   lineHeight?: number;

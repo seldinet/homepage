@@ -28,21 +28,42 @@ const IntroContainer = styled.div`
   }
 `;
 
+const ResponsiveH1 = styled(BaseH1)`
+    @media (max-width: 768px) {
+        font-size: 32px;
+    }
+`
+
+const ResponsiveParagraph = styled(BaseParagrpah)`
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+`
+
+const ResponsiveButton = styled(BaseButton)`
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin: 36px 0 0 0;
+  }
+`
+
+
+
 export default function Intro() {
   const { open } = useRequestModal();
 
   return (
     <IntroContainer>
-      <BaseH1 fontSize={40} fontWeight="bold" color="#333d4b">
+      <ResponsiveH1 fontSize={40} fontWeight="bold" color="#333d4b">
         {`우리 회사의 마케팅 단계에
 적합한 플랜을 선택하세요.`}
-      </BaseH1>
+      </ResponsiveH1>
       <div>
-        <BaseParagrpah fontSize={20} lineHeight={1.6} color="#333d4b">
+        <ResponsiveParagraph fontSize={20} lineHeight={1.6} color="#333d4b">
           {`솔루션에 대한 설명 또는 컨설팅이 필요하시면,  상담하기로 문의주세요.  
 전문 컨설턴트가 맞춤 상담을 지원해드립니다. `}
-        </BaseParagrpah>
-        <BaseButton
+        </ResponsiveParagraph>
+        <ResponsiveButton
           borderRadius={8}
           fontSize={18}
           fontWeight="bold"
@@ -52,7 +73,7 @@ export default function Intro() {
           onClick={open}
         >
             상담 신청
-        </BaseButton>
+        </ResponsiveButton>
       </div>
     </IntroContainer>
   );

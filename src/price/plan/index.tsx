@@ -57,6 +57,18 @@ const PlanContainer = styled.div`
     }
 `
 
+const ResponsiveH2 = styled(BaseH2)`
+    @media (max-width: 768px) {
+        font-size: 26px;
+    }
+`
+
+const ResponsiveText = styled(BaseText)`
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+`
+
 
 export default function Plan() {
     const [plan,setPlan] = useState({
@@ -74,13 +86,13 @@ export default function Plan() {
     return (
         <PlanContainer>
             <div>
-                <BaseH2 margin="0 0 20px" textAlign="left" fontSize={32} fontWeight="bold" lineHeight={1.5} color="#333d5b">
+                <ResponsiveH2 margin="0 0 20px" textAlign="left" fontSize={32} fontWeight="bold" lineHeight={1.5} color="#333d5b">
                     기간 한정 특가 이벤트
-                </BaseH2>
-                <BaseText textAlign="left" fontSize={20} lineHeight={1.6} color="#4e5968" margin="0 0 60px">
+                </ResponsiveH2>
+                <ResponsiveText textAlign="left" fontSize={20} lineHeight={1.6} color="#4e5968" margin="0 0 60px">
                     {`지금 Starter플랜, EXPERT 플랜을 구매할 시, 연간 플랜 할인가로 셀디 서비스를 이용하실 수 있습니다.
 지금 바로 50% 할인된 가격으로 서비스를 이용해보세요.(월 플랜 최소 사용 기간 4개월)`}
-                </BaseText>
+                </ResponsiveText>
                 <ul>
                     <PlanItem plan={plan} onChangePlan={handlePlan} title={PLAN["STARTER"].title} description={PLAN["STARTER"].description} basePrice={PLAN["STARTER"][divdedValue].basePrice} price={PLAN["STARTER"][divdedValue].price} rate={PLAN["STARTER"].rate} functionList={PLAN["STARTER"].function}/>
                     <PlanItem plan={plan} onChangePlan={handlePlan} title={PLAN["EXPERT"].title} description={PLAN["EXPERT"].description} basePrice={PLAN["EXPERT"][divdedValue].basePrice} price={PLAN["EXPERT"][divdedValue].price} rate={PLAN["EXPERT"].rate} functionList={PLAN["EXPERT"].function}/>

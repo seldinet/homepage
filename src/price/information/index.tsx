@@ -9,6 +9,7 @@ const InfomationContainer = styled.div`
     width: 100%;
     align-items: center;
     padding: 0 30px;
+    margin-top: 80px;
     margin-bottom: 120px;
     box-sizing: border-box;
 
@@ -26,7 +27,11 @@ const InfomationContainer = styled.div`
                 & > li {
                     font-size: 20px;
                     line-height: 1.8;
-                    color: "#4e5968;"
+                    color: "#4e5968";
+              
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                    }
                 }
             }
             & > li {
@@ -34,15 +39,27 @@ const InfomationContainer = styled.div`
                 line-height: 1.6;
                 color: #4e5968;
                 margin-bottom: 12px;
+
+                  
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                }
             }
         }
     }
 `
+
+const ResponsiveH3 = styled(BaseH3)`
+    @media (max-width: 768px) {
+        font-size: 26px;
+    }
+`
+
 export default function Information() {
     return (
         <InfomationContainer>
             <div>
-              <BaseH3 margin="0 0 20px" fontSize={32} fontWeight="bold" lineHeight={1.5} textAlign="left" color="#333d4b">셀디 서비스 이용 안내</BaseH3>
+              <ResponsiveH3 margin="0 0 20px" fontSize={32} fontWeight="bold" lineHeight={1.5} textAlign="left" color="#333d4b">셀디 서비스 이용 안내</ResponsiveH3>
               <ul>
                   <li>• 서비스 제공 기간은 결제 당일 다음날부터 산정됩니다.</li>
                   <li>• 월 플랜의 최소 사용 기간은 4개월 입니다.</li>
