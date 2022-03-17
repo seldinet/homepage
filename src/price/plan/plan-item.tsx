@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { BaseText, BaseHR, BaseSwitch} from '../../components'
+import { useRequestModal } from '../../request-modal'
 
 const Container = styled.li`
     display: flex;
@@ -55,7 +56,7 @@ const RateText = styled(BaseText)<{isEnterprise?: boolean}>`
 `
 
 const ApplyButton = styled.button`
-display: block;
+    display: block;
     width: 100%;
     height: 45px;
     
@@ -70,6 +71,7 @@ display: block;
     color:#fff;
     text-align: center;
     margin-bottom: 28px;
+    cursor: pointer;
 `
 
 interface PriceItemProps {
@@ -84,6 +86,8 @@ interface PriceItemProps {
 }
 
 export default function PlanItem({title, description, basePrice, price, rate, functionList, isEnterprise, plan, onChangePlan} : PriceItemProps) {
+    const { open } = useRequestModal();
+
     return (
         <Container>
             <div>
@@ -102,7 +106,7 @@ export default function PlanItem({title, description, basePrice, price, rate, fu
             <RateText isEnterprise={isEnterprise} margin="0 0 30px" fontSize={14} lineHeight={1.71} color="#e32604">
                 (<span>{basePrice}{isEnterprise ? null : '만원'}</span> {isEnterprise ? '최대' : null} {rate}%할인)
             </RateText>
-            <ApplyButton>신청하기</ApplyButton>
+            <ApplyButton onClick={open}>신청하기</ApplyButton>
             <ul>
                 {functionList.map((func, index) => {
                     return (
