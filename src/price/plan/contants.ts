@@ -2,7 +2,7 @@
 export const PLAN = {
     STARTER: {
         title: 'Starter',
-        description: `중국 수출,  중국인 고객 마케팅을 시작하는
+        description: `중국 수출, 중국인 고객 마케팅을 시작하는
         기업`,
         month: {
             basePrice: 30,
