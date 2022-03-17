@@ -84,10 +84,12 @@ export default function Header({ primary = true } : { primary?: boolean }) {
   return (
     <HeaderContainer backgroundColor={primary ? '#00135f' : '#fff' }>
       <div>
-        <HeaderLogo
-          src={primary ? addPrefix("/images/header-logo.png") : addPrefix("/images/header-logo-blue.png")}
-          alt="seldi-logo"
-        />
+        <a href="/">
+          <HeaderLogo
+            src={primary ? addPrefix("/images/header-logo.png") : addPrefix("/images/header-logo-blue.png")}
+            alt="seldi-logo"
+          />
+        </a>
         <MoreButton>
           <MenuIcon src={addPrefix("/images/menu-icon.png")} alt="menu-icon" />
         </MoreButton>
@@ -95,17 +97,20 @@ export default function Header({ primary = true } : { primary?: boolean }) {
           <BaseText fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#333d4b'}>
             {t("header.introduce")}
           </BaseText>
+          <BaseText fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#333d4b'}>
+                  {t("header.manual")}
+          </BaseText>  
           <div>
             <a href="/price">
               <BaseText fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#333d4b'}>
-                  {t("header.manual")}
+                  {t("header.price")}
               </BaseText>  
             </a>
           </div>
           <div>
             <a href="https://seldikorea.recruitin.co.kr/jobs">
               <BaseText fontSize={16} lineHeight={1.61} color={primary ? '#fff' : '#333d4b'}>
-                {t("header.manual")}
+                {t("header.recruit")}
               </BaseText>
             </a>
           </div>

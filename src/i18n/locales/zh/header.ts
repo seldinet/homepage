@@ -5,6 +5,7 @@ export const header = {
     manual: "服务流程",
     login: "登录",
     question: "咨询",
+    price: "價錢",
     recruit: "招聘启事",
   },
 };

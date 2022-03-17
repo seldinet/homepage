@@ -5,6 +5,7 @@ export const header = {
     manual: "메뉴얼",
     login: "로그인",
     question: "문의하기",
+    price: "가격",
     recruit: "채용공고",
   },
 };
